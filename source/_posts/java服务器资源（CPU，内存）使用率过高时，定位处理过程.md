@@ -10,11 +10,12 @@ photos:
 ---
 
 # 找出问题进程
-服务器内存： top
-jps // 获取当前java进程号PID
+`top` 服务器内存
+`jps` 获取当前java进程号PID
 
 # 对象内存分布
-jmap -histo:live [pid]
+`jmap -histo:live [pid]`
+
 ```
 # 正则提取：.*com.wosai.*
  322:           161          11592  com.wosai.uncle.entity.Program
@@ -43,7 +44,8 @@ http://ip/sys/gc.log
 ![gcviewer-1.35-SNAPSHOT.jar](http://7xnbs3.com1.z0.glb.clouddn.com/15-10-19/69991098.jpg)
 
 ## 手动收集当前GC情况
-jstat -gc [pid] 1000 5 //  (每隔1秒监控一次，5次)
+* `jstat -gc [pid] 1000 5`  每隔1秒监控一次，5次
+
 ```
 [root@iZ23ka2dtiqZ ~]# jstat -gc 24094 1000 5
  S0C    S1C    S0U    S1U      EC       EU        OC         OU       PC     PU    YGC     
@@ -65,7 +67,8 @@ YGCT    FGC    FGCT     GCT
 
 1087  129.358   0      0.000  129.358
 ```
-jstat -gcutil [pid] 1000 10 //  (按百分比显式) 
+* `jstat -gcutil [pid] 1000 10` 按百分比显式
+
 ```
 [root@iZ23ka2dtiqZ ~]# jstat -gcutil 24094 1000 10
   S0     S1     E      O      P     YGC     YGCT    FGC    FGCT     GCT   
@@ -82,17 +85,15 @@ jstat -gcutil [pid] 1000 10 //  (按百分比显式)
 ```
 
 # 收集（多次）内存堆栈信息. 分析工具：samurai.zip
----
 假设多次收集，时间跨度30s,依然存在的平台线程即说明在此周期内都未曾执行结束，就很可能有问题（排查守候线程）
 自编写线程堆栈分析神器：jstackAnalyse_wosai.java
-```
-kill -3 [pid] // jstack [PID] >> jstack.log)
-```
+`kill -3 [pid]` or `jstack [PID] >> jstack.log`
+
 ![samurai](http://yusuke.homeip.net/samurai/en/images/threadTab_en.gif)
 
 
 # 最后：镜像内存dump(较大,且在服务器上) . 查看工具:IBM HeapAnalyzer (MAT)
-jmap -dump:format=b,file=dumpfileName.dump [PID]
+`jmap -dump:format=b,file=dumpfileName.dump [PID]`
 
 ---
 # 先找高消耗（内存/cpu）进程->再找高消耗（内存/cpu）线程->记录线程pid的十进制->找到内存堆栈中的具体执行内容
