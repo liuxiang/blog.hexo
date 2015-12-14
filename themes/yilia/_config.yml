@@ -1,6 +1,7 @@
 # Header
 menu:
   主页: /
+  搜索: http://live.swiftype.com/live?key=wn63uga7gV3vyuVSqc7M&url=http%3A%2F%2Fliuxiang.github.io%2F
   所有文章: /archives
   i love yuan: http://liuxiang.github.io/iloveyuan
   i love yuan，Gallery: http://liuxiang.github.io/iloveyuan/FullPageImageGallery/photo.html
@@ -58,3 +59,43 @@ friends:
 #aboutme: false
 #开启——
 aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+
+
+# 参考`hexo-theme-next`: https://github.com/iissnan/hexo-theme-next/blob/master/_config.yml
+# 以下参数可能不起作用,因来自`hexo-theme-next`而不是当前的`hexo-theme-yilia`
+# Automatically scroll page to section which is under <!-- more --> mark.
+scroll_to_more: true
+
+# Automatically Excerpt
+auto_excerpt:
+  enable: false
+  length: 150
+  
+# Use Lato font
+use_font_lato: true
+
+# Swiftype Search API Key
+# swiftype_key:zc8MyjMX7hiVaqA4mPzP
+
+# Baidu Analytics ID
+#baidu_analytics:
+
+# Duoshuo ShortName
+#duoshuo_shortname:
+
+# Disqus
+#disqus_shortname:
+
+# Share
+#jiathis:
+
+# Share
+#duoshuo_share: true
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+#google_site_verification:
+
+
+# Google Analytics
+#google_analytics:

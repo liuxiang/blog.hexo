@@ -45,6 +45,9 @@ CATALINA_OPTS="$CATALINA_OPTS -Xloggc:webapps/sys/gc.log -XX:+PrintGCDetails -XX
 
 # jprofile服务器端配置
 CATALINA_OPTS="$CATALINA_OPTS -agentlib:jprofilerti=port=8849,nowait -Xbootclasspath/a:/usr/local/jprofile/jprofiler9/bin/agent.jar"
+
+# jvm shut down时,输出dump文件
+CATALINA_OPTS="$CATALINA_OPTS -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/usr/local/apache-tomcat-7.0.59/logs/heap.dump"
 ```
 
 windows 配置

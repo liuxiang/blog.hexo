@@ -1,6 +1,6 @@
 title: css 笔记
 date: 2015-10-28 00:00:00 #发表日期，一般不改动
-categories: 前端#文章文类
+categories: 前端 #文章文类
 tags: [前端,css] #文章标签，多于一项时用这种格式
 photos:
 
