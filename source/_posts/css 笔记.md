@@ -20,9 +20,9 @@ style="height: 100px;text-align: center;line-height: 100px"
 提示：text-align: center 依赖父元素宽度
 ```
 
-绝对定位, 变形（Transforms）居中
+相对/绝对定位, 变形（Transforms）居中
 ``` css
-position: absolute;
+position: relative;
 left: 50%;
 
 -webkit-transform: translate(-50%);

@@ -8,8 +8,7 @@ tags: [快速启动,Wox]
 `官方介绍` http://doc.getwox.com/zh/basic/README.html
 `github开源` https://github.com/Wox-launcher/Wox
 `github下载`    https://github.com/Wox-launcher/Wox/releases/download/v1.2.0-beta/Wox-1.2.0-beta.zip
-`备用下载`    
-http://pan.baidu.com/s/1kTokCvX#dir/path=%2FWox
+`备用下载`      http://pan.baidu.com/s/1kTokCvX#dir/path=%2FWox
 
 # 效果
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/15-12-1/51238957.jpg)

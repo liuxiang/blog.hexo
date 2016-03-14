@@ -1,9 +1,11 @@
 title: ionic项目同步更新package or 依据package.json,安装plugin或module
 date: 2016-1-7 00:00:03 #发表日期，一般不改动
-categories: ionic #文章文类
-tags: [ionic,package.json]
+categories: ionic  #文章文类
+tags: [ ionic ,package.json ]
+
 
 ---
+
 # 同步更新package.json
 **npm部分**
 > 方式一: 删除`package.json`中的`dependencies`项,再`npm init`会依据`node_modules`的实际安装情况,更新`dependencies`配置项.但会多余配置部分信息,可能与原文件不一致,会出现覆盖.
@@ -26,5 +28,6 @@ tags: [ionic,package.json]
 `ionic state reset` 重置(慎用)
 > <font color=red>重置方法首先将删除您的平台和插件文件夹.</font>
 然后会依据你的package.json文件指定的 plugins 和 platforms重新安装
+
 
 <!-- more -->

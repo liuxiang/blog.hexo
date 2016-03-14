@@ -31,8 +31,9 @@ tags: [npm,cnpm]
 `npm root` 查看当前包的安装路径
  
 `npm root -g`  查看全局的包的安装路径
+`cnpm root -g`  查看全局的包的安装路径
  
-`npm help`  帮助，如果要单独查看install命令的帮助，可以使用的npm help install
+`npm help`  `npm help init` 帮助，如果要单独查看install命令的帮助，可以使用的npm help install
  
 帮助文档：https://npmjs.org/doc/ - `CLI Commands`
 
@@ -46,6 +47,7 @@ http://blog.csdn.net/haidaochen/article/details/8546796
 
 `npm config get registry` 获取npm当前镜像地址
 `cnpm config get registry` 获取cnpm当前镜像地址
+`npm info underscore` 配置查看
 
 `npm config delete <key>` 删除配置
 
@@ -53,10 +55,15 @@ http://blog.csdn.net/haidaochen/article/details/8546796
 
 `npm cache clean` 清理缓存
 
+`npm rebuild node-sass` 重新编译模块
+`npm ls ionic` 当前目录是否安装ionic此node模块
+`npm ls ionic -g` 全局目录是否安装ionic此node模块
 **参考**
 `npm-node模块管理工具 命令概述`
 http://www.gowhich.com/blog/665
 
+`npm镜像使用方法 - 这个人很懒 - 开源中国社区`
+http://my.oschina.net/mustang/blog/263435?fromerr=BuKV7UnY
 ---
 
 # 安装cnpm,淘宝npm镜像

@@ -44,7 +44,65 @@ G:\IDE\adt-bundle\eclipse\plugins\org.apache.ant_1.8.3.v201301120609\bin
 ```
 参考: http://blog.csdn.net/aaawqqq/article/details/19755179/
 
+
+
+＃cnpm环境变量
+```
+#  检查cnpm模块安装目标
+
+C:\Users\Administrator>npm root -g
+
+C:\Users\Administrator\AppData\Roaming\npm\node_modules
+
+
+# 配置<用户>path
+
+C:\Users\Administrator\AppData\Roaming\npm
+
+
+检查:
+npm root -g
+cnpm root -g
+```
+
+
 <!-- more -->
+
+# 环境检查
+
+```
+java -version
+ant -version
+adb version
+phonegap -version
+cordova -version
+ionic -version
+```
+
+
+```
+C:\Users\Administrator\Desktop\testionic>java -version
+java version "1.8.0_66-ea"
+Java(TM) SE Runtime Environment (build 1.8.0_66-ea-b02)
+Java HotSpot(TM) 64-Bit Server VM (build 25.66-b02, mixed mode)
+
+
+C:\Users\Administrator\Desktop\testionic>ant -version
+Apache Ant(TM) version 1.9.4 compiled on April 29 2014
+
+
+C:\Users\Administrator\Desktop\testionic>adb version
+Android Debug Bridge version 1.0.31
+
+
+C:\Users\Administrator\Desktop\testionic>phonegap -version
+5.3.6
+
+
+C:\Users\Administrator\Desktop\testionic>cordova -version
+5.3.3
+```
+
 
 # 安装phonegap
 windows>`npm install -g phonegap`
@@ -71,6 +129,11 @@ Mac使用>`sudo npm install -g ionic`
 `ionic start myproject`
 `cd myproject`
 
+
+**更多参考**
+https://github.com/driftyco/ionic-cli
+
+
 #### Android
 * `ionic platform add android`
 * `ionic build android`
@@ -83,8 +146,50 @@ Mac使用>`sudo npm install -g ionic`
 * `ionic build ios`
 * `ionic emulate ios`
 
+
+### web
+>webstorm - 选择或打开 index.html ,Ctrl+Shift+F10. 
+会打开网页  http://localhost:63342/k12student/www/index.html
+
+
+> ionic - `ionic  serve `
+会打开网页 http://localhost:8100/#/
+
+
+```
+C:\Users\Administrator\Desktop\testionic\myproject>ionic serve
+
+
+Multiple addresses available.
+Please select which address to use by entering its number from the list below:
+ 1) 169.254.170.223 (VirtualBox Host-Only Network)
+ 2) 192.168.3.13 (WLAN)
+ 3) localhost
+Address Selection:  3
+3
+Selected address: localhost
+Running live reload server: http://localhost:35729
+Watching : [ 'www/**/*', '!www/lib/**/*' ]
+Running dev server: http://localhost:8100
+Ionic server commands, enter:
+  restart or r to restart the client app from the root
+  goto or g and a url to have the app navigate to the given url
+  consolelogs or c to enable/disable console log output
+  serverlogs or s to enable/disable server log output
+  quit or q to shutdown the server and exit
+
+
+ionic $
+```
+
 ### 检查安装
 `cordova plugin list`
+
+
+### 更新
+`cordova prepare`
+
+> CLI的 prepare 命令把Cordova项目的web应用内容从www文件夹复制到适当的平台文件夹中。每次改动web内容后都要使用这个命令。 prepare 命令由接下来要介绍的许多命令自动调用。
 
 ### adb常规命令
 `adb devices` 查询模拟器/设备实例

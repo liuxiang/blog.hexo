@@ -48,11 +48,34 @@ tags: [ios,ios免审核]
 * 优点: 不需要提前添加设备,不限制设备数量,配合第三方内侧托管平台可快速发布,安装
 * 特点: 企业应用,不可上架App Store,适合不公开应用使用. 其次是脱离AppStore管理,快速发布.
 
+
+位置:  开发者官网-Certificates- Provisioning Profiles- [Development/Distribution]
+
+*  新建:  企业证书,用于企业发布. Development- iOS App Development ...选设备-download
+
+
+
 `ios apple企业账号申请流程`
 http://my.oschina.net/u/1025290/blog/299040?fromerr=j6bC8HuY
 
 `iOS 企业证书发布app 流程`
 http://blog.csdn.net/justinjing0612/article/details/8758692
+
+
+`以无线方式安装企业内部应用-官方说明`
+http://help.apple.com/deployment/ios/#/apda0e3426d7
+
+
+`ios apple企业账号申请流程`
+http://my.oschina.net/u/1025290/blog/299040
+http://bbs.9ria.com/thread-197242-1-1.html
+
+http://www.cnblogs.com/xilinch/p/4037164.html
+
+
+`iOS 开发者中的公司账号与个人账号之间有什么区别？`
+https://www.zhihu.com/question/20308474
+https://developer.apple.com/support/compare-memberships/
 
 ## 企业包,上传至第三方应用内侧托管平台
 如: `fir.im` 平台会提供测试应用的地址及二维码供内侧用户下载

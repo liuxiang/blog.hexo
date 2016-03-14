@@ -233,3 +233,35 @@ class User {
 
 # github 源码示例
 https://github.com/liuxiang/myPro/tree/master/java8-example/src/java8
+
+
+---
+
+
+**code1 **
+``` 
+public void sayHello(String name){
+    if(name==null){
+        name = "游客";
+    }
+    System.out.println("Hello, "+name);
+}
+```
+
+
+** code2 **
+``` 
+
+import com.google.common.base.Optional;
+ 
+public void sayHello(String name){
+    name = Optional.fromNullable(name).or("游客");
+    System.out.println("Hello, "+name);
+}
+```
+
+
+**参考**
+`使用Optional避免NullPointerException`
+
+http://www.tuicool.com/articles/uIzeYjf

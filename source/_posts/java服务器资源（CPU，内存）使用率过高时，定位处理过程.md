@@ -10,7 +10,7 @@ photos:
 ---
 
 # 找出问题进程
-`top` 服务器内存
+`top`  服务器内存 / `top -H -p <进程ID>`
 `jps` 获取当前java进程号PID
 
 # 对象内存分布

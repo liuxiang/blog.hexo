@@ -13,7 +13,7 @@ bower ng-file-upload#~11.2.3    ENOGIT git is not installed or not in the PATH
 原因是,组件存在git上,下载依赖git客户端
 
 # 处理办法:
-* 下载git for windows   https://git-for-windows.github.io
+* 下载`git for windows` https://git-for-windows.github.io
 * 安装&配置Path
 ```
 set PATH=%PATH%;C:\Program Files\Git\bin

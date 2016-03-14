@@ -9,7 +9,6 @@ tags: [Webstorm]
 
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/95893666.jpg)
 <!--
-
 -->
 
 # N
@@ -35,14 +34,19 @@ tags: [Webstorm]
 
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/74796693.jpg)
 <!--
-
 -->
 
 # F7
 [Alt+F7]             列表展开,对象使用位置
 [Ctrl+F7]            快速选择到下一个引用处[当前方法-对象引用](参数) ★
 [Ctrl+Alt+F7]     对象引用 ★
-[Ctrl+Shift+F7]  选择当前类此字符串.同 Ctrl+F (建议结合Ctrl+L/Ctrl+ShiftL 选择上一个,下一个) 
+[Ctrl+Shift+F7]    选择当前类此字符串. 同 Ctrl+F (建议结合Ctrl+L/Ctrl+ShiftL 选择上一个,下一个)  同`F3`,`Shift+F3`
 [Ctrl+Alt+Shift+F7] 同 [Ctrl+Shift+F7]
+
+
+# 选中单词 上下文搜索
+选中>Ctrl+F
+Ctrl+L 下一个
+Ctrl+shift+L 上一个
 
 <!-- more -->
