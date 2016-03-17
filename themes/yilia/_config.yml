@@ -53,12 +53,13 @@ tagcloud: true
 #开启——
 friends:
   正一的博客: http://jeremy017.github.io
+  邹学文博客: http://zouxuewen.github.io
 
 #是否开启“关于我”。
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…
+aboutme: 我很危险,快快离我远点
 
 
 # 参考`hexo-theme-next`: https://github.com/iissnan/hexo-theme-next/blob/master/_config.yml
