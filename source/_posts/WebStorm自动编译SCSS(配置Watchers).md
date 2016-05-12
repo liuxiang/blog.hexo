@@ -7,17 +7,9 @@ tags: [ WebStorm,scss ]
 
 ---
 
-# 功能位置
-Ctrl+Shift+A `setting`
-搜索 `watcher` 选择结果 `Tools File Watchers`
 
 
-修改输出路径(默认与原文件同级):
-`Arguments`:  `--no-cache --update $FileName$:$FileParentDir$\www\css\ $FileNameWithoutExtension$.css`
-
-
-# 添加SCSS监听Watchers任务,提示
-`Please set program to run!`
+# 前置条件：
 
 需要安装`Ruby` & gem安装sass
 ```
@@ -29,7 +21,29 @@ https://ruby.taobao.org
 # 请确保只有 ruby.taobao.org
 $ gem install sass
 ```
-`program ` 填写路径: `C:\Ruby22-x64\bin\scss.bat`
+
+
+# 配置：
+* 添加SCSS监听Watchers任务,提示
+`Please set program to run!`
+
+
+*   功能位置 `Settings-Tools-File Watchers-add SCSS`
+Ctrl+Shift+A `setting`
+搜索 `watcher` 选择结果 `Tools File Watchers`
+
+
+*   修改输出路径(默认与原文件同级):
+`Arguments`:  `--no-cache --update $FileName$:$FileParentDir$\www\css\ $FileNameWithoutExtension$.css`
+
+
+
+```
+Program:`C:\Ruby22-x64\bin\scss.bat`
+Arguments:
+默认：`--no-cache --update $FileName$:$FileNameWithoutExtension$.css`
+修改：`--no-cache --update $FileName$:$FileParentDir$\www\css\$FileNameWithoutExtension$.css`
+```
 
 
 # 编译错误: 编码问题

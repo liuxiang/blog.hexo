@@ -7,6 +7,38 @@ tags: [ 前端 , css ]
 
 
 ---
+`CSS居中完整版` http://www.tuicool.com/articles/v6f6byE  =>  https://segmentfault.com/a/1190000004851345
+
+`Erichain/css-center-complete`  https://github.com/Erichain/css-center-complete
+
+
+
+## Contents
+为了大家更好的理解，我们使用了树形的目录结构。
+
+
+- [水平方向的居中](https://github.com/Erichain/css-center-complete/tree/master/horizontal)
+  + [水平居中行内元素(比如链接或者文本)](https://github.com/Erichain/css-center-complete/tree/master/horizontal/center-inline-element)
+  + [水平居中块级元素](https://github.com/Erichain/css-center-complete/tree/master/horizontal/center-block-element)
+  + [水平居中多个块级元素](https://github.com/Erichain/css-center-complete/tree/master/horizontal/center-multiple-block-elements)
+- [垂直方向的居中](https://github.com/Erichain/css-center-complete/tree/master/vertical)
+  + [垂直居中行内元素(比如链接或者文本)](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-inline-element)
+    - [单行](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-inline-element/single-line)
+    - [多行](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-inline-element/multi-lines)
+  + [垂直居中块级元素](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-block-element)
+    - [知道元素的高度](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-block-element/know-height)
+    - [不知道元素的高度](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-block-element/unknown%20height)
+    - [使用flexbox](https://github.com/Erichain/css-center-complete/tree/master/vertical/center-block-element/flexbox)
+- [水平垂直都居中](https://github.com/Erichain/css-center-complete/tree/master/horizontal%26%26vertical)
+  + [元素的宽高固定](https://github.com/Erichain/css-center-complete/tree/master/horizontal%26%26vertical/fixed-height-and-width)
+  + [元素的宽高不固定](https://github.com/Erichain/css-center-complete/tree/master/horizontal%26%26vertical/unknown-height-and-width)
+  + [使用flexbox](https://github.com/Erichain/css-center-complete/tree/master/horizontal%26%26vertical/flexbox)
+
+
+每一种情况都有相应的code pen，可以点击链接查看。
+
+
+---
 # 环境
 * `position`
 static ：默认值，无特殊定位，对象遵循正常文档流。top，right，bottom，left等属性不会被应用，默认值。
@@ -30,13 +62,13 @@ display:flex 多栏多列布局
 
 
 
-## 常见
-`text-align:center;`
+# 水平居中
+`text-align:center;` 行内，行内块级
 
-` margin:0 auto; `   
+` margin:0 auto; `     块级元素，居中盒子与父级盒子宽度指定切小于父级宽度,常搭配`width:80%`
 
 
-## position: relative,  absolute  
+*   水平居中-未知宽度
 
 ```
 .divCenter {
@@ -47,42 +79,232 @@ display:flex 多栏多列布局
   -ms-transform: translate(-50%);
   -o-transform: translate(-50%);
   transform: translate(-50%);
-  transform: translate(-50%);
 }
 ```
 
 
-##  float
-```
-...
-```
-
-
-## display:flex
-```
-...
-```
-
-
 # 垂直居中
-单行( line-height与heigth相等,配合center )
-```
-height :  100px ;
-line-height :  100px;
+## 行内元素或者行内块级元素？(inline 或者 inline-block)
 
-text-align :  center ;
+*   单行(line-height与heigth相等,配合center)
+`pading-top:10px; pading-bottom:10px`
+```
+height: 100px;
+line-height: 100px;
+text-align: center;
+```
+
+
+*   多行(vertical-align:middle)
+```
+height: 100px;
+line-height: 100px;
+white-space: nowrap;
+```
+*   多行 垂直 居中- flex Box 垂直居中
+```
+.flex-center-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;  /* 决定主轴的方向（即项目的排列方向） */
+    height: 400px;
+}
+```
+*   inline-block 垂直 居中
+```
+.ghost-center {
+    position: relative;
+}
+.ghost-center::before {
+    content: " ";
+    display: inline-block;
+    height: 100%;
+    width: 1%;
+    vertical-align: middle;
+}
+.ghost-center p {
+    display: inline-block;
+    vertical-align: middle;
+}
+```
+
+
+## 块级元素
+
+*   已知高度-垂直居中
+```
+.parent {
+    position: relative;
+}
+.child {
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -50px;
+    /* 如果没有使用border-box的话就只需要关心padding和border了 */
+}
+```
+*   未知高度-垂直居中
+```
+.parent {
+    position: relative;
+}
+.child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+```
+
+
+*   flex Box 垂直居中
+```
+.parent {
+    display: flex;
+    flex-direction: column; /* 决定主轴的方向（即项目的排列方向） */
+    justify-content: center;
+}
+```
+
+
+## 横竖都居中
+*   元素固定宽高
+```
+.parent {
+    position: relative;
+}
+ 
+.child {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+ 
+    margin: -70px 0 0 -170px;
+}
+```
+*   不确定元素的宽高？
+```
+.parent {
+    position: relative;
+}
+.child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+```
+*   flex Box 横竖都居中
+```
+.parent {
+    display: flex;                         /* 父级 flex Box布局 */
+    justify-content: center;      /* -水平居中*/
+    align-items: center;            /* -垂直居中*/
+}
+```
+或
+```
+.parent {
+
+     display: flex;            \*父级 flex Box布局 *\
+}
+. child  {
+        margin: auto;       \* 内容可设置margin:auto *\
+}
+```
+
+
+`justify-content: center`会改变`.  parent `自身面板位置.
+如希望子集其它元素不受影响，可以在子集元素中配合`margin:auto` 使用.  或使用` display: -webkit-box `布局：
+```
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+```
+
+
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-4-24/75684487.jpg)
+<!-- 
+    -->
+
+
+
+# ===========================================> 更多,更强
+
+
+使用`display: block;` `display: inline-block;` 来改变元素类似，辅助定位
+
+
+
+* table-cell 居中
+```
+.parent {
+  display: table;
+  width: 200px;
+  height: 400px;
+}
+.child {
+     vertical-align: middle;    /*垂直居中*/
+     display: table-cell;    /*表格化*/
+     word-break: break-all;    /*文字长度达到盒子的宽度后强制换行*/
+}
+
 
 ```
-多行(vertical-align:middle)
+` ★ `  `CSS居中完全指南`  http://www.tuicool.com/articles/f6BJn23
+
+`div表格定高垂直居中，水平居中 - 推酷`  http://www.tuicool.com/articles/VjARZbv
+
+
+*   webkit  box
 ```
-display:table-cell;
-vertical-align:middle;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;   
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+```
+`一问就蒙(1)--垂直居中` http://www.tuicool.com/articles/Qj67zqJ
+
+
+*   -webkit-box &  flex二合一
 
 ```
+.Center-Container.is-Flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+     -ms-flex-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+     -ms-flex-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+```
+` ★ ` `如何只用CSS做到完全居中`
+http://blog.jobbole.com/46574/
+* 原文  http://codepen.io/shshaw/full/gEiDt
+* 专题  `Designing CSS Layouts With Flexbox Is As Easy As Pie – Smashing Magazine` 
+https://www.smashingmagazine.com/2013/05/centering-elements-with-flexbox/
 
 
 ---
-**参考**
+**更多参考**
 `讲一讲CSS的position/float/display都有哪些取值，它们相互叠加时的行为都是什么？_许乐乐_新浪博客`
 http://blog.sina.com.cn/s/blog_5e4b495d0101738w.html
 
@@ -93,7 +315,6 @@ http://www.tuicool.com/articles/f6BJn23
 
 ` ★ ` `如何只用CSS做到完全居中`
 http://blog.jobbole.com/46574/
-
 
 
 `盘点8种CSS实现垂直居中水平居中的绝对定位居中技术`  源自=>  `如何只用CSS做到完全居中`
@@ -123,13 +344,41 @@ http://blog.csdn.net/chenmoquan/article/details/41547609
 http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
 
 
+>`Flex 布局教程：实例篇 - 阮一峰的网络日志`
+http://www.ruanyifeng.com/blog/2015/07/flex-examples.html?bsh_bid=683103006
+
+
+
 > `CSS3 display:flex和display:box有什么区别？ - 知乎`
 https://www.zhihu.com/question/22991944
 
 
-#工具 
-`居中css How to Center in CSS`
+` ★ `  `使用 CSS 弹性盒 - CSS | MDN`
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
+![]( https://mdn.mozillademos.org/files/12998/flexbox.png)
+<!--
+-->
+
+
+
+`结合 CSS3 的布局新特征谈谈常见布局方法`
+http://www.tuicool.com/articles/QrUZzyu
+
+
+`这可能是史上最全的CSS自适应布局总结`
+http://www.tuicool.com/articles/rYjyiyz
+
+
+# 工具 
+` 居中场景选择css  How to Center in CSS`
 http://howtocenterincss.com/
+https://github.com/oliverzheng/howtocenterincss
+
+
+` 居中场景选择 css   Centering in CSS: A Complete Guide | CSS-Tricks`
+https://css-tricks.com/centering-css-complete-guide/
+https://github.com/Erichain/css-center-complete
+
 
 
 <!-- more -->

@@ -82,6 +82,10 @@ https://stackoverflow.com/questions/31043235/disable-remote-debugging-in-appgyve
 https://stackoverflow.com/questions/25186129/error-when-i-try-to-build-framework-file-with-cordova
 
 
+` 玩转cordova之二--增强的webview `
+http://www.ituring.com.cn/article/130434
+
+
 <!-- more -->
 
 

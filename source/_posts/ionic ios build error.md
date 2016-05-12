@@ -22,6 +22,14 @@ Error: Error code 65 for command: xcodebuild with args: -xcconfig,/Users/liuxian
 
 
 # 解决办法
+
+
+`明确原因`: 安装重复 `com.ionic.keyboard` 和 `ionic-plugin-keyboard`
+
+`ionic-plugin-keyboard` 会自动添加(可能是判断` com.ionic.keyboard `版本是否过旧)
+我是将 `com.ionic.keyboard`删除来解决此问题的.
+
+
 方法一.当前cordova -v 6.0.0 回退到安装插件时的cordova -v 5.3.3即可
 
 ```
