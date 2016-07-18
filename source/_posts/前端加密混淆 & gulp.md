@@ -1,30 +1,39 @@
-title: 前端加密混淆 & gulp
+title:  前端 加密 混淆  & gulp
 date: 2016-05-09 00:00:00
-categories: 前端加密混淆
-tags: [前端加密混淆，gulp]
+categories:  前端 加密 混淆
+tags: [ 前端 加密 混淆 ， gulp ]
+
 
 ---
 
-# 混淆工具： 
+
+# 混淆工具：  
 * YUI Compressor
-* Google Closure Compiler
-* UglifyJS
-* JScrambler (付费) - 目前还无法被反混淆
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-5-10/99220276.jpg)
+*   Google Closure Compiler
+*   UglifyJS
+*   JScrambler (付费) - 目前还无法被反混淆
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-10/99220276.jpg)
 <!--
 -->
 
-# 反混淆工具： 
-* jsbeautifier.org
-* JSDetox
+
+
+# 反混淆工具：  
+*   jsbeautifier.org
+*   JSDetox
+
 
 **参考** `技术分享：几种常见的JavaScript混淆和反混淆工具分析实战`
+
 http://www.tuicool.com/articles/ZNfa6nz
+
 
 `Javascript代码压缩细节 - 推酷` `解读uglifyJS`
 http://www.tuicool.com/articles/jmIB3a
 
+
 ---
+
 
 ```
 压缩css(gulp-minify-css)
@@ -53,18 +62,24 @@ var del = require('del'),
     runSequence = require('run-sequence');
 ```
 `gulp使用：进行压缩合并js、css - 推酷`
+
 http://www.tuicool.com/articles/3EVNraf
+
 
 `gulp压缩合并静态文件 - 推酷`
 http://www.tuicool.com/articles/aae6vi
 
+
+
 ---
+
 
 * （cordova hook）[jshint,async] 检查javascript：这一步需要在代码压缩和代码混淆之前进行以保证javascript代码无错误
 * （gulp task）[gulp-angular-templatecache] 将html页面代码转换为angular的JS代码：这一步起到了混淆html页面代码的作用
 * （gulp task）[gulp-ng-annotate] 启用angular严格依赖注入：这一步需要在代码混淆之前进行以保证angular的依赖注入没有问题
 * （gulp task）[gulp-useref] 组合js代码以及组合css代码：这一步起到了混淆js代码以及css代码的作用
 * （cordova hook）[uglify,mv] 代码丑化、压缩、混淆
+
 
 `cordova hook`
 npm install jshint --save-dev
@@ -75,18 +90,26 @@ npm install gulp-useref --save-dev
 npm install cordova-uglify --save-dev
 npm instal mv --save-dev
 
+
 **参考** `ionic代码压缩与代码混淆 - 菜鸟的学习之路 - 博客频道 - CSDN.NET`
 http://blog.csdn.net/u010730126/article/details/50115579
+
 
 ---
 `如何制作一个发布版的ionic应用？`
 http://rensanning.iteye.com/blog/2205322
 
+
 `myApp.rar (3.9 MB) `
+
 http://dl2.iteye.com/upload/attachment/0107/8283/37f71219-d435-3413-bb36-4e1df3c86df9.rar
 
+
 `before-after-apk.rar (4.3 MB)`
+
 http://dl2.iteye.com/upload/attachment/0107/8300/86187ff7-c063-34af-986b-d2d6cb36e842.rar
+
+
 
 
 `ionic实用功能(二)——制作一个发布版的ionic应用(混淆、打包) | 志慧师兄`
@@ -94,5 +117,6 @@ http://www.ionic.ren/2015/11/25/ionic%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BA%
 (同上篇，仅多`after_prepare`hook文件下载)
 `after_prepare`
 http://www.ionic.ren/wp-content/uploads/2015/11/after_prepare.zip
+
 
 <!-- more -->

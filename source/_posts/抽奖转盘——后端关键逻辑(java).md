@@ -1,8 +1,8 @@
 title: 抽奖转盘——后端关键逻辑(java)
 date: 2016-3-4 00:00:02
-categories: javaScript 
+categories: javaScript
 tags: [javaScript,抽奖转盘]
-
+ 
 ---
 # 后端控制 : 抽奖概率 & 库存维护 & 中奖登记
 ```
@@ -24,9 +24,9 @@ public class Test {
             Object[][] prizeObj = new Object[][] {
                     /** {id,奖品名,库存(概率)} */
                     { 0, "未中奖", 0 },
-                    { 1, "一等奖 iphone", 10 }, 
-                    { 2, "二等奖 书包", 30 }, 
-                    { 3, "三等奖 水杯", 300 } 
+                    { 1, "一等奖 iphone", 10 },
+                    { 2, "二等奖 书包", 30 },
+                    { 3, "三等奖 水杯", 300 }
                     };
             int prizedTotle = 0;
             // 统计总量
@@ -63,5 +63,5 @@ public class Test {
     }
 }
 ```
-
+ 
 <!-- more -->

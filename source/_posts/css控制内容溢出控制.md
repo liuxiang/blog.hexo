@@ -1,15 +1,20 @@
 title: css控制内容溢出控制
 date: 2016-3-8 00:00:00
-categories: css
-tags: [前端,css]
+categories:   css
+
+
+tags: [ 前端 , css ]
+
 
 ---
 css控制内容溢出时，使用`...`末尾
 
+
 # Html
 ```
-<div class="overflow">ssssssssssssssssssssssssssssssssssssss<div>
+<div class=" overflow ">ssssssssssssssssssssssssssssssssssssss<div>
 ```
+
 
 # CSS
 ```
@@ -20,13 +25,16 @@ css控制内容溢出时，使用`...`末尾
 }
 ```
 # 效果
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-3-14/80967330.jpg)
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-3-14/80967330.jpg)
 <!-- 
-  `=>`  -->
+  `=>`    -->
+
+
 
 **参考**
-`ionic css .item`
-https://github.com/driftyco/ionic/blob/master/scss/_items.scss  line:150 
+` ionic css .item`
+https://github.com/driftyco/ionic/blob/master/scss/_items.scss   line:150
+
 ```
 // Handle text overflow
 .item,
@@ -51,19 +59,23 @@ https://github.com/driftyco/ionic/blob/master/scss/_items.scss  line:150
 }
 ```
 
+
 # 还原多行
 ```
 .item-text-wrap{
   overflow: visible;
+
   white-space: normal;
 }
+
 ```
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-3-14/73237505.jpg)
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-3-14/73237505.jpg)
 <!--
- => -->
+  =>   -->
+
 
 **参考**
-https://github.com/driftyco/ionic/blob/master/scss/_items.scss  line:213
+https://github.com/driftyco/ionic/blob/master/scss/_items.scss     line:213
 ```
 .item-text-wrap .item,
 .item-text-wrap .item-content,
@@ -87,5 +99,6 @@ https://github.com/driftyco/ionic/blob/master/scss/_items.scss  line:213
   white-space: normal;
 }
 ```
+
 
 <!-- more -->

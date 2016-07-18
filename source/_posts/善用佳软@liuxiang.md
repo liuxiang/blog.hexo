@@ -3,6 +3,7 @@ date: 2013-5-30 00:00:00
 categories: 善用佳软
 tags: [善用佳软]
 
+
 ---
 
 # 善用佳软@liuxiang
@@ -31,7 +32,7 @@ tags: [善用佳软]
 # java性能问题分析工具
 | soft | desc |
 | ------------ | ------------ |
-|[GC分析]gcviewer-1.29-bin.tar.gz | https://github.com/chewiebug/GCViewer http://sourceforge.net/projects/gcviewer/|
+|[GC分析]gcviewer-1.29-bin.tar.gz | https://github.com/chewiebug/GCViewer   http://sourceforge.net/projects/gcviewer/   |
 | [堆栈分析]IBM |Java Memory Analyzer Tool (MAT) https://www.ibm.com/developerworks/|
 | [堆栈分析-diy] |jstackAnalyse.java |
 | 堆栈分析工具 |TAD https://java.net/projects/tda |
@@ -63,10 +64,12 @@ tags: [善用佳软]
 | ModelGoon | 是一个 Java 包的依赖分析的Eclipse插件 |
 | Snowberry |Eclipse的Java类图插件 Snowberry|
 
-# window系统工具
+# 效率工具
 | soft | desc |
 | ------------ | ------------ |
-| 本地文件搜索 |http://www.voidtools.com/ |
+| 本地文件搜索 | http://www.voidtools.com/ |
+|  本地全文检索  filelocatorpro  |  http://www.mythicsoft.com/filelocatorpro   |
+| Wow |  快速启动  http://www.getwox.com/ |
 |栅栏 | Fences&trade; Download |
 |[系统程序转托盘图标]| Minime SaphuA |
 |[系统程序栏位置调整] |Taskbar Shuffle |
@@ -75,11 +78,41 @@ tags: [善用佳软]
 |[快速查看文件夹大小] | Welcome to JAM Software |
 |[快速查看文件夹大小] | Quick View Folder Size |
 |[在线远程]TeamViewer | WebConnector |
-|TDP x-Ray Lite | 饼状图磁盘管理工具 |
 |AutoHotkey | 自定义快捷键 |
 |PDMReader数据字典阅读器官方网站| 数据库常用软件 PowerDesigner的辅助工具 |
-|[磁盘分区] | Acronis Disk Director Suite V11.0.0.216 |
 |光速搜索 |小巧灵敏的搜索工具[盛大出品]|
 |思维导图 | xMind |
+| 文件批量重命名 | antrenamer2|
+| 文件批量重命名 | renamer |
+
+
+#  system Tool
+| soft | desc |
+| ------------ | ------------ |
+
+|[磁盘分区] | Acronis Disk Director Suite V11.0.0.216 |
+
+|TDP x-Ray Lite | 饼状图磁盘管理工具 |
+
+|系统任务|SystemExplorer|
+| 硬件瓶颈 | SystemMonitor|
+| 系统优化 | Dism++10.1.6.3A_Full |
+
+
+
+# 安全工具
+
+| soft | desc |
+| ------------ | ------------ |
+
+| 抓包 |  fiddler |
+| 抓包 |  wsexplorer  |
+| 抓包 |  Wireshark  |
+| 抓包 |  HTTP Analyzer Full Edition  |
+| 抓包 |  Betwixt-windows |
+
+| 抓包 |  smsniff TCPIP网络数据包捕获 |
+
+
 
 <!-- more -->

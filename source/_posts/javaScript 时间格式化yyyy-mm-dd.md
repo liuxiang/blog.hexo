@@ -39,9 +39,17 @@ Date.prototype.Format = function(fmt)
 console.log(new Date().Format("yyyy-MM-dd hh:mm:ss"));
 
 ```
+# 工具
+`Moment.js` http://momentjs.com/docs/
+
+```
+
+moment("2010-10-20 4:30",       "YYYY-MM-DD HH:mm");   // parsed as 4:30 local time
+moment("2010-10-20 4:30 +0000", "YYYY-MM-DD HH:mm Z"); // parsed as 4:30 UTC
+```
 
 
-# dateUtils.js
+# 自定义工具 dateUtils.js
 ```
 
 /* 日期时间脚本库方法列表  

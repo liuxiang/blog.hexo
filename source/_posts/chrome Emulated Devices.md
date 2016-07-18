@@ -1,19 +1,199 @@
 title: chrome Emulated Devices
 date: 2016-05-14 00:00:02
 categories: chrome Emulated Devices
-tags: [chrome Emulated Devices]
+tags: [chrome Emulated Devices ]
+
 
 ---
 
+
 # 设备信息
-`xiaomi note` 393 * 699
+
+`xiaomi note`  393 *  699 （-25）= 393 * 674
+
 Mozilla/5.0 (Linux; U; Android 6.0.1; zh-cn; MI NOTE LTE Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/46.0.2490.85 Mobile Safari/537.36 XiaoMi/MiuiBrowser/2.1.1 
 
 
+
+`华为Pad T1` 601 * 962 （-60）= 601 * 902
+
+
+`iPad` 768*1024   （电池条如果设置浮动透明，则会与浏览器中调试接近）
+
+
+`诺基亚pad n1s` 768 * 976  （-25）  = 768 * 951
+
+
+
 # 获取方式
+
+
 `访问` http://liuxiang.github.io/online-web-tools
+
 `短地址` http://t.im/142vg
 
-![](http://qr.api.cli.im/qr?data=http%253A%252F%252Fliuxiang.github.io%252Fonline-web-tools%252F&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=b116ecafc357e6fd36a95f69b009e891)
+
+
+
+![]( http://qr.api.cli.im/qr?data=http%253A%252F%252Fliuxiang.github.io%252Fonline-web-tools%252F&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=b116ecafc357e6fd36a95f69b009e891)
+
+
+
+
+- 有效分辨率：
+
+
+
+---
+
+- 手机分辨率比例
+
+
+
+
+1536/2048=0.75
+
+
+
+
+720/1280=0.56
+
+1242/2208=0.56
+
+1080/1920=0.56
+
+1440/2560=0.56
+
+
+
+
+---
+
+
+
+
+
+
+
+ipad & ipad mini：768/1024=0.75
+
+
+
+
+华为pad：601/962=0.62
+
+华为pad：601/(962-60)=0.66
+
+
+
+
+诺基亚pad：768/976=0.78
+
+
+
+
+华为荣耀6：360/592=0.60
+
+华为荣耀6：360/(592-?)=0.60
+
+
+
+
+xiaomi note:392/699=0.56
+
+xiaomi note:392/(699-20)=0.58
+
+
+
+
+
+
+
+---
+
+
+分辨率：
+Android：主流机型主要为 480x800, 480x854, 540x960, 720x1280, 800x1280 这五种。
+（非主流机型还包括：240x320, 320x480, 640x960 这三种，其中两种都与 iPhone 一致。）
+iOS: 主流机型主要为 320x480, 640x960, 640x1136, 1024x768, 2048x1536, 这五种。
+WP：主流机型主要为 480x800，720x1280, 768x1280 这三种
+其他：不清楚，请别人回答。
+ 
+屏幕尺寸：
+android：一般在4寸-4.8寸之间，也有小到 3.2寸的，也有5寸，7寸，10寸的。
+iOS：3.5寸，9.8寸，4.0 寸，7.8 寸。
+ 
+作者：pansz
+链接：https://www.zhihu.com/question/20440405/answer/15140879
+
+
+`【友盟+】全域指数 ` http://www.umindex.com/devices/android_resolutions
+
+
+---
+20/1280=0.56
+720/1184=0.60
+960/1440=0.66
+1536/2048=0.75
+
+
+0.56-0.62=-0.05
+0.60-0.62=-0.02  
+
+
+0.66-0.62=0.04   (0.66>0.62意味着0.66相比0.62更接近1即越“方or宽”，而0.62则相比0.66越"长or高")
+0.75-0.62=0.13
+
+
+
+
+
+---
+
+(以下使用 xiaomi note 进行测试)
+
+
+
+
+`xiaomi note`  393 * 699  （-25）=  393 * 674
+
+浏览器调试：                                                                                                                                                                                                手机上实际效果：
+
+       
+
+
+减去电池条高度（-25），更接近
+
+
+
+
+
+
+
+ 手机浏览器                                                                                                                   微信浏览器
+
+
+
+
+
+
+
+
+
+---
+
+
+`华为Pad T1` 601 * 962  （-60）= 601 * 902
+
+
+华为Pad T1,测试结果需要将高度（-60）才与真实的接近（原因是华为的软件底条和电池条占用了高度）  902/962=0.93
+        
+
+
+---
+`诺基亚pad n1s` 768 * 976  （-25）  = 768 * 951
+
+        
 
 <!-- more -->
+

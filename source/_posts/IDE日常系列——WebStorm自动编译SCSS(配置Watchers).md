@@ -1,5 +1,5 @@
-title: WebStorm自动编译SCSS(配置Watchers)
-date: 2016-2-26 00:00:00
+title: IDE日常系列——WebStorm自动编译SCSS(配置Watchers)
+date: 2016-3-25 00:00:00
 categories:  WebStorm
 
 tags: [ WebStorm,scss ]

@@ -4,6 +4,7 @@ categories: mysql #文章文类
 tags: [mysql,存储过程,构造数据] #文章标签，多于一项时用这种格式
 photos:
 
+
 ---
 -- 创建测试table
 ```
@@ -37,15 +38,18 @@ begin
 end;
 ```
 
+
 -- 调用函数
 ```
 call p_makeData_test();
 ```
 
+
 -- 删除存储过程
 ```
 drop PROCEDURE IF EXISTS p_makeData;
 ```
+
 
 -- 造数据-存储过程
 ```
@@ -61,6 +65,7 @@ begin
         set rand_age = rand()*100;
         set rand_type = rand()*10;
 
+
         insert INTO `makedata`(name,age,type,create_date) 
             value('name',rand_age,rand_type,SYSDATE());
         
@@ -70,15 +75,18 @@ begin
             leave l1;
         end if;
 
+
     end loop;
 end;
 ```
+
 
 -- 调用函数
 ```
 call p_makeData();
 ```
 <!-- more -->
+
 
 # 赠品: 
 ## mysql循环
@@ -95,3 +103,4 @@ GOTO
 　告知解释器遇到 delimiter后面的符号时作用相当于分号，这样可以避免在shell 中写mysql脚本时，与分号发生冲突.
    只有遇到另外的一个 // 时，才会执行所写的语句
    http://www.cnblogs.com/yujinghui/archive/2013/04/22/3036787.html
+

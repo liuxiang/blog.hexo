@@ -1,10 +1,12 @@
 title: wiz2md 为知Markdown笔记批量导出
 date: 2015-12-01 00:00:01 #发表日期，一般不改动
 categories: wiz #文章文类 
-tags: [wiz,Markdown,ant renamer]
+tags: [ wiz , Markdown,ant renamer ]
 
 ---
+
 # 第一部分: 将为知Markdown笔记,以文本导出
+
 1.选择导出文件
 2.右上角设置选择:文件-导出文件-导出纯文本-选择路径,编码
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/15-12-1/49138792.jpg)

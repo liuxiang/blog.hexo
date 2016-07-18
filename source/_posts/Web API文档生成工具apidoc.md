@@ -1,17 +1,24 @@
 title: Web API文档生成工具apidoc
 date: 2016-04-16 02:00:00
-categories: api文档生成工具
+categories:  api文档生成工具
 tags: [api文档生成工具]
+
 
 ---
 
-`官网` http://apidocjs.com/
+`官网`  http://apidocjs.com/
 `github` https://github.com/apidoc/apidoc
+
+
 
 # 安装 & 使用
 1.`npm install apidoc -g`
 
-2.`控制台运行>` `apidoc`
+
+
+2.`控制台运行>` ` apidoc `
+
+
 
 `运行错误`
 ```
@@ -19,6 +26,7 @@ warn: Please create an apidoc.json configuration file.
 error: No files found.
 { Path: '.' }
 ```
+
 
 3.`新建空白文件夹->新建文件` `apidoc.json`
 ```
@@ -31,13 +39,15 @@ error: No files found.
 }
 ```
 
+
 `运行错误`
 ```
 error: No files found.
 { Path: '.' }
 ```
 
-4.`新建api内容描述文件` `example.js`
+
+4.`新建api内容描述文件` ` example.js `
 ```
 /**
 * @api {get} /user/:id Request User information
@@ -66,15 +76,20 @@ error: No files found.
 */
 ```
 
-5.`控制台运行>` `apidoc`
+
+5.`控制台运行>` ` apidoc `
 `info: Done.`
+
 
 6.`正常输出静态目录` `doc`
 打开 `index.html`
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/59379577.jpg)
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/59379577.jpg)
 <!--
 -->
 
+
+
 # 应用 & 技巧
+
 
 <!-- more -->

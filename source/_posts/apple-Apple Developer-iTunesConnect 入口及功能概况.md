@@ -11,6 +11,11 @@ https://www.apple.com/cn/
 
 
 
+- 修改国籍
+https://appleid.apple.com/choose-your-country
+
+
+
 # 登录页 (右上角购物袋-登录)
 https://secure1.store.apple.com/cn/shop/sign_in?c=aHR0cDovL3d3dy5hcHBsZS5jb20vY24vc2hvcC9nby9zaG9wL3NpZ25faW4_Y2lkPUFPUy1DTi1BZmYtUEhHfDFhb3MxYjA5MzQwYmRjYjk0ZDQ1YjhiY2ViYjgzMjBlN2NjYzQzNGE2NTlj&r=SCDHYHP7CY4H9XK2H&s=aHR0cDovL3d3dy5hcHBsZS5jb20vY24vc2hvcC9nby9zaG9wL3NpZ25faW4_Y2lkPUFPUy1DTi1BZmYtUEhHfDFhb3MxYjA5MzQwYmRjYjk0ZDQ1YjhiY2ViYjgzMjBlN2NjYzQzNGE2NTlj
 

@@ -2,8 +2,10 @@ title: java8 初探——Optional
 date: 2015-12-08 00:00:05 #发表日期，一般不改动
 categories: java8 #文章文类
 tags: [java8, Optional]
-
+ 
 ---
+
+
 # MyOptional
 ```java
 package java8.optional;
@@ -48,27 +50,27 @@ public class MyOptional {
     }
 }
 /**
- * Optionals(可选项)
- * 
- * @Optionals是没有函数的接口，取而代之的是防止 NullPointerException
+* Optionals(可选项)
+*
+* @Optionals是没有函数的接口，取而代之的是防止 NullPointerException
  *                             异常。这是下一节的一个重要概念，所以让我们看看如何结合Optionals工作。
- * 
- * @Optional is a simple container for a value which may be null or non-null.
+*
+* @Optional is a simple container for a value which may be null or non-null.
  *           Think of a method which may return a non-null result but sometimes
  *           return nothing. Instead of returning null you return an Optional in
  *           Java 8.
- * 
- * @Optional是一个简单的容器，这个值可能是空的或者非空的。考虑到一个方法可能会返回一个non-null的值， 也可能返回一个空值。
+*
+* @Optional是一个简单的容器，这个值可能是空的或者非空的。考虑到一个方法可能会返回一个non-null的值， 也可能返回一个空值。
  *                                                           为了不直接返回null，我们在Java
  *                                                           8中就返回一个Optional。
- * 
- *
- * @http://www.tuicool.com/articles/RjqEJrm
- **/
+*
+*
+* @http://www.tuicool.com/articles/RjqEJrm
+**/
 ```
-
+ 
 <!-- more -->
-
+ 
 # MyOptionalExample
 ```java
 package java8.optional;
@@ -143,41 +145,41 @@ public class MyOptionalExample {
     }
 }
 /**
- * @Java 8 - Optional
- * 
- * @Optional 是值的容器，只有兩種狀態，不是有值就是沒值。目的是做為 null 的替代方案。Optional 提供工廠方法，將你輸入的值產生為
- * @Optional 物件，這時Optional 物件即為該值的容器，若要取回該值，必須使用 get() 方法。
- * @Optional 屬於 value-based ，對於識別敏感的操作(包含參考相等的判斷(==)、hash
+* @Java 8 - Optional
+*
+* @Optional 是值的容器，只有兩種狀態，不是有值就是沒值。目的是做為 null 的替代方案。Optional 提供工廠方法，將你輸入的值產生為
+* @Optional 物件，這時Optional 物件即為該值的容器，若要取回該值，必須使用 get() 方法。
+* @Optional 屬於 value-based ，對於識別敏感的操作(包含參考相等的判斷(==)、hash
  *           code或同步(synchronization)等)會有不確定性的結果，應該要避免使用這些操作。
- * 
- * @http://www.tuicool.com/articles/ERBzIrE
- */
+*
+* @http://www.tuicool.com/articles/ERBzIrE
+*/
 ```
-
+ 
 # user
 ```java
 package java8.optional;
-
+ 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
+ 
 class User {
     public int id;
     public String name;
-
+ 
     public User(int id, String name) {
         this.id = id;
         this.name = name;
     }
-
+ 
     // ==== 不使用 Optional ====
     private List<User> getUsers() {
         // 假裝從資料庫取值
         List<User> users = Arrays.asList(new User(1, "Tony"), new User(2, "John"), new User(3, "Emma"));
         return users;// 有可能 null
     }
-
+ 
     private User findUserByName(String name) {
         List<User> users = getUsers();
         if (users != null) {// 很好，有檢查 null
@@ -189,7 +191,7 @@ class User {
         }
         return null;// 可能找不到而返回 null
     }
-
+ 
     private void optionalDemo() {
         User user = findUserByName("Amy");
         if (user != null) {// 很好，有檢查 null
@@ -198,14 +200,14 @@ class User {
             System.out.println("User not found.");
         }
     }
-
+ 
     // ==== 使用 Optional ====
     private Optional<List<User>> getUsers2() {
         // 假裝從資料庫取值
         List<User> users = Arrays.asList(new User(1, "Tony"), new User(2, "John"), new User(3, "Emma"));
         return Optional.ofNullable(users);
     }
-
+ 
     private Optional<User> findUserByName2(String name) {
         Optional<List<User>> users = getUsers2();
         // 對要使用的資料檢查，參數也要
@@ -216,7 +218,7 @@ class User {
         }
         return Optional.empty();
     }
-
+ 
     private void optionalDemo2() {
         Optional<User> user = findUserByName2("Amy");
         // 使用 isPresent() 有點冗長
@@ -230,16 +232,14 @@ class User {
     }
 }
 ```
-
+ 
 # github 源码示例
 https://github.com/liuxiang/myPro/tree/master/java8-example/src/java8
-
-
+ 
 ---
-
-
-**code1 **
-``` 
+ 
+**code1**
+```
 public void sayHello(String name){
     if(name==null){
         name = "游客";
@@ -247,11 +247,9 @@ public void sayHello(String name){
     System.out.println("Hello, "+name);
 }
 ```
-
-
-** code2 **
-``` 
-
+ 
+**code2**
+```
 import com.google.common.base.Optional;
  
 public void sayHello(String name){
@@ -259,9 +257,7 @@ public void sayHello(String name){
     System.out.println("Hello, "+name);
 }
 ```
-
-
+ 
 **参考**
 `使用Optional避免NullPointerException`
-
 http://www.tuicool.com/articles/uIzeYjf

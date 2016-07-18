@@ -55,6 +55,19 @@ if ((appInfo.flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0 &&
         }
     }
 ```
+---
+
+
+# android配置文件声明调试
+`AndroidManifest.xml`  - `android:debuggable`
+
+```
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:debuggable="true">
+```
 
 
 ---

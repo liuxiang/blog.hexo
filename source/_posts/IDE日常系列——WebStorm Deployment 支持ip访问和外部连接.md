@@ -1,6 +1,6 @@
-title: WebStorm Deployment 支持ip访问和外部连接
+title: IDE日常系列—— WebStorm Deployment 支持ip访问和外部连接
 date: 2016-03-25 00:00:00
-categories: WebStorm Deployment
+categories:  WebStorm Deployment
 tags: [ WebStorm Deployment ]
 
 

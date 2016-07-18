@@ -1,9 +1,11 @@
 title: javaScript 逆向递归
 date: 2016-03-19 00:00:00
 categories: javaScript
-tags: [javaScript,反递归]
+tags: [ javaScript, 逆向 递归 ]
+
 
 ---
+
 
 # 处理前数据
 ```
@@ -81,6 +83,7 @@ tags: [javaScript,反递归]
     }
 ]
 ```
+
 
 # 处理后数据
 ```
@@ -169,10 +172,11 @@ tags: [javaScript,反递归]
 ]
 ```
 
+
 **格式化工具**  http://tool.oschina.net/codeformat/json
 
-# 示例代码
-```
+
+# 示例代码 ```
 /**
 * Created by Administrator on 2016/1/8.
 */
@@ -243,4 +247,7 @@ tags: [javaScript,反递归]
 })();
 ```
 
+
 <!-- more -->
+
+

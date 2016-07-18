@@ -1,9 +1,13 @@
+
+
 title: java8 初探——twoColons::function realize
 date: 2015-12-08 00:00:04 #发表日期，一般不改动
 categories: java8 #文章文类
 tags: [java8, twoColons::function realize]
-
+ 
 ---
+
+
 # twoColons::
 ```java
 package java8.twoColons;
@@ -15,11 +19,11 @@ class TwoColonsUtil {
         return a + ";" + b;
     }
     public static void main(String[] args) {
-        
+ 
         // lambda 实现
         FuncI f0 = (String a,String b) -> a + ";" + b;
         System.out.println(f0.get("aaa", "bbb"));
-        
+ 
         /**
          * @我的理解:依据函数接口`FuncI`的定义 ,进行函数实现的封装
          * @获取方法的实现: TwoColonsUtil.getSomething(String a,String b)
@@ -28,10 +32,10 @@ class TwoColonsUtil {
          */
         FuncI f = TwoColonsUtil::getSomething;
         System.out.println(f.get("aaa", "bbb"));
-        
+ 
         // 证明`TwoColonsUtil::getSomething`对应对象
         System.out.println(((FuncI)TwoColonsUtil::getSomething).get("aaa", "bbb"));
-        
+ 
         // 非静态
         FuncI f2 = new TwoColonsUtil()::doGet;
         System.out.println(f2.get("ccc", "ddd"));
@@ -43,7 +47,7 @@ interface FuncI {
     public String get(String a, String b);
 }
 ```
-
+ 
 # TwoColons New 构造实现
 ```java
 package java8.twoColons;

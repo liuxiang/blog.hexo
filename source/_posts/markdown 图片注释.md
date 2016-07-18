@@ -1,7 +1,9 @@
 title: markdown 图片注释
 date: 2016-2-23 00:00:03 #发表日期，一般不改动
-categories: markdown #文章文类
-tags: [markdown ]
+categories:  markdown   #文章文类
+
+tags: [ markdown   ]
+
 
 ---
 # 使用场景
@@ -10,26 +12,41 @@ tags: [markdown ]
 为了实现本地的图片资源方便查看又能同时兼容hexo网页博客发布,
 可以使用`<!-- -->`注释本地图片.
 
+
+
 # 正确:方式一
 <\!--
 
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg)-->
+
+
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg) -->
+
 
 <!--
+
  -->
-# 错误:方式二
+
+# 错误: 方式二
 <\!--
 
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg)
+
+
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg)
 -->
+
+
 
 <!--
 -->
 出现的问题 : hexo博客框架显示会将标记打印出来.如:
-![](http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg)
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg)
+
 <\!--
 
+
+
 -->
+
 
 # 原因
 ```
@@ -37,10 +54,14 @@ tags: [markdown ]
 <!--
 -->
 
+
 方式二编译后(中间多处的空行导致了解析失败)
+
 <!--
+
 
 -->
 ```
+
 
 <!-- more -->

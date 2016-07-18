@@ -1,10 +1,13 @@
 title: javaScript IIFE & 避免冲突
 date: 2016-3-3 00:00:03
 categories:   javaScript  
+
 tags: [ javaScript,  IIFE ]
 
 
 ---
+
+
 # 关键字
 `命名空间` ` 全局变量` ` 冲突` `污染`
 

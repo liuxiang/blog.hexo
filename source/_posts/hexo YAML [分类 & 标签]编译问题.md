@@ -77,11 +77,12 @@ YAMLException: can not read a block mapping entry; a multiline key may not be an
 解决: "- "需要带空格
 ```
 
+
 # 附赠
 ```
 # 日常笔记中需要保留原图片,且在预览时仅查看在线图片地址. 可以通过如下注释实现
-![](http://***.jpg)
-              <-注意这需要一个空行,否则使用hexo的博客文章中会出现`<!-` `->`标记
+![]( http://***.jpg)
+                  < -注意这需要一个空行,否则使用hexo的博客文章中会出现`<!-` `->`标记
 <!-- 
 IMG图片
 -->
