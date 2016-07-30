@@ -1,6 +1,7 @@
 title: nginx 部署的项目无法加载jquery.js或仅加载出代码片段问题,多个解决办法
 date: 2016-07-22 00:00:00
-tags: [linux,nginx]
+tags: [linux, nginx ]
+
 
 ---
 

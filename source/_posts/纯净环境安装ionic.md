@@ -18,7 +18,7 @@ https://nodejs.org/en/download/releases/
 
 #  3 .ionic添加`platform(平台)`,  出错-缺少android-SDK支持
 
-`ionic platform add android`
+`ionic platform add android`或`cordova platform add android`
 
 
 ## 3.1为编译android端安装文件(apk),初始化android环境,安装android-sdk
@@ -34,6 +34,7 @@ set  Path=%Path%;% ANDROID_HOME %\tools;% ANDROID_HOME %\ platform-tools
 
 
 # 4.ionic添加`platform(平台)`
+
 `ionic platform add android`
 
 
@@ -52,8 +53,19 @@ org.gradle.wrapper.ExclusiveFileAccessManager.access(ExclusiveFileAcc essManager
 
 原因: 资源被墙,下载超时.
 
-解决: 手动下载,修改下载目标位置
-           或
+解决: 手动下载
+http://services.gradle.org/distributions
+( gradle-2.2.1-all.zip下载很慢时，可以下载最新包重命名即可 )
+
+
+直接放置目标位置
+```
+
+# 放入此目录下
+C:\Users\Administrator\.gradle\wrapper\dists\gradle-2.2.1-all\****\
+
+```
+或
 ```
 新增环境变量(路径需转义)：
 CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL
@@ -62,6 +74,15 @@ distributionUrl=D:\tool/gradle-2.2.1-all.zip
 参考:
 http://stackoverflow.com/questions/29874564/ionic-build-android-error-when-download-gradle
 http://blog.csdn.net/mzwang123/article/details/22280825
+
+
+`卡包`
+```
+Download https://repo1.maven.org/maven2/org/antlr/antlr/3.5.2/antlr-3.5.2.jar
+
+```
+
+
 
 
 问题二:

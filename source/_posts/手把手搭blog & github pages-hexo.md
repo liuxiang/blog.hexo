@@ -134,7 +134,7 @@ $ ssh -T git@github.com
 Hi liuxiang! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-
+ 
 ## 五.hexo提交发布内容(public)
 ` hexo deploy` #发布github(依赖_config.yml中deploy-github配置)
 
@@ -223,6 +223,8 @@ tags: [标签1, 标签2]
 - 插件
 `统计访问:不蒜子` http://service.ibruce.info/
 
+`更多` https://hexo.io/plugins/
+`搜索插件` Hexo 中有用户基础的 Swiftype 和 Hexo 官网使用的 Algolia
 
 
 ## markdown格式，编写指导

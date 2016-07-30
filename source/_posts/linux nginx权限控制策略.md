@@ -1,4 +1,4 @@
-title: linux nginx权限控制策略.md
+title: linux nginx权限控制策略
 date: 2016-07-21 00:00:03
 tags: [linux, nginx ]
 
@@ -10,7 +10,7 @@ tags: [linux, nginx ]
 - 缺点：`其它用户`包含了定义的管理员用户和其它所有用户.存在安全隐患
 
 ```
-chown 777 nginx
+chmod 777 nginx
 ```
 
 # 方式二：更改`html`目录所有者 （推荐）
@@ -18,8 +18,13 @@ chown 777 nginx
 - 缺点:文件的原所有者(非root)将失去管理权.但可以还原所有者来归还权限
      - root用户具备ALL权限,可以操作其他用户的文件
 ```
-sudo chown -R sysadmin nginx/html 
-sudo chown -R  sysadmin: sysadmin   nginx/html  #  群组一并修改
+sudo chown -R sysadmin /usr/local/nginx/html 
+sudo chown -R  sysadmin: sysadmin   /usr/local/nginx /html  #  群组一并修改
+```
+- tomcat 同理
+```
+sudo chown -R sysadmin  /usr/local/apache-tomcat-*/webapps
+
 ```
 
 

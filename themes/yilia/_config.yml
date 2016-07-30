@@ -1,11 +1,12 @@
 # Header
 menu:
-  主页: /
-  # 搜索: http://live.swiftype.com/live?key=wn63uga7gV3vyuVSqc7M&url=http%3A%2F%2Fliuxiang.github.io%2F
-  关于我(挺坏一人): /1988/12/27/关于我/
+  # 主页: /
   所有文章: /archives
+  所有文章(免翻页&搜索): https://github.com/liuxiang/blog.hexo/tree/master/source/_posts
+  # 搜索: https://github.com/liuxiang/blog.hexo/search?l=markdown&o=desc&s=indexed&type=Code&utf8=%E2%9C%93
   i love yuan: http://liuxiang.github.io/iloveyuan
   Gallery: http://liuxiang.github.io/iloveyuan/FullPageImageGallery/photo.html
+  关于我: /1988/12/27/关于我/
   # 随笔: /tags/随笔
 
 # SubNav
@@ -60,7 +61,7 @@ friends:
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 我很危险,离我远点
+aboutme: 刘祥@赛学霸
 
 # 参考`hexo-theme-next`: https://github.com/iissnan/hexo-theme-next/blob/master/_config.yml
 # 以下参数可能不起作用,因来自`hexo-theme-next`而不是当前的`hexo-theme-yilia`

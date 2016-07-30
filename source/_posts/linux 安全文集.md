@@ -37,4 +37,15 @@ http://www.111cn.net/sys/CentOS/53293.htm
 http://blog.kkyun.com/?p=50
 
 
+---
+
+
+`使用netstat检测及监测网络连接-系统运维|Linux.中国-开源社区`
+https://linux.cn/article-3807-1.html
+
+
+`linux查看网络链接状况命令_欧阳剑飞_新浪博客`
+http://blog.sina.com.cn/s/blog_4d6c45250100xhc7.html
+
+
 <!-- more -->

@@ -13,15 +13,16 @@ usermod -g  wheel sysadmin
 - 查看用户所在用户组
 ```
 [root@iZ23huf4wo4Z ~]# groups sysadmin
-sysadmin : sysadmin
+sysadmin : wheel
+
 
 
 [root@iZ23huf4wo4Z ~]# id sysadmin #   查看用户情况
-uid=500(sysadmin) gid=500(sysadmin) groups=500(sysadmin)
+uid=502(sysadmin) gid=10(wheel) groups=10(wheel)
 ```
 - 查看用户组下成员
 ```
-more /etc/group
+more /etc/group | grep wheel
 
 grep GID /etc/passwd
 
@@ -51,7 +52,11 @@ su -
 ```
  
 # 查看当前登录
-`whoami` 或 `cd ` `pwd` 看看默认的路径
+```
+[sysadmin@iZ23zj3xeplZ ~]$ id
+uid=503(sysadmin) gid=10(wheel) groups=10(wheel)
+```
+还有`whoami` 和 `cd ` `pwd` 看看默认的路径
 
 
 ---

@@ -81,3 +81,12 @@ deploy:
   #repository: https://github.com/liuxiang/liuxiang.github.io.git
   repository: git@github.com:liuxiang/liuxiang.github.io.git
   branch: master
+
+# algolia 搜索支持
+algolia:
+  applicationID: '4WRS5FUSU3'
+  apiKey: '5a35605f35914b28f2bdc841aa67e423'
+  adminApiKey: 'a90aa0d6db70a3fe0794e6fd258fb8c6'
+  indexName: 'liuxiang.github.io'
+  chunkSize: 5000
+## Record is too big size=111570 bytes. Contact us if you need an extended quota at success

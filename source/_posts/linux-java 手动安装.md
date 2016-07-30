@@ -1,4 +1,4 @@
-title: linux-java 手动安装.md
+title: linux-java 手动安装
 date: 2016-07-19 00:00:04
 tags: [ linux , java ]
 

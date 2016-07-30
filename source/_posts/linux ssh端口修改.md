@@ -10,12 +10,12 @@ sudo vim /etc/ssh/sshd_config
 ```
  
 # 更改端口
-``` cpp
+```  cpp
 # Port 22 => Port 1997
 ```
  
 # 重启sshd服务
-``` cpp
+```  cpp
 sudo /etc/init.d/sshd restart
 ```
  
