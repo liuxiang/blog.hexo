@@ -8,6 +8,8 @@ tags: [ editorconfig ]
 ---
 # 作用
 不同IDE使用相同 的代码风格管理` editorconfig `
+脱离IDE设置代码样式，主流IDE均支持
+
 
 
 # 表现
@@ -21,7 +23,7 @@ tags: [ editorconfig ]
 
 
 # 示例
-ionic 创建工程
+任何项目根目录文件 `.editorconfig`
 ```
 # http://editorconfig.org
 root = true

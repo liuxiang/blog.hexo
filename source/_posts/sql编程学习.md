@@ -62,8 +62,17 @@ select if('钓鱼岛'='日本','yes','no'); # 如果test是真，返回t；否�
 select IFNULL('true','空'); # 如果arg1不是空，返回arg1，否则返回arg2
 select IFNULL(null,'空');# 如果arg1不是空，返回arg1，否则返回arg2
 ```
+```
+# 流程控制
 
-
+select FLOOR(1+RAND() * (14+1)) into @device_rand;
+select @device_rand,(CASE
+                        WHEN @device_rand=1 THEN 'Android 6.x'
+                        WHEN 1<@device_rand && @device_rand<=3 THEN 'iOS 9 (iPad)'
+                        WHEN 3<@device_rand && @device_rand<=7 THEN 'iOS 9 (iPhone)'
+                        WHEN 7<@device_rand && @device_rand<=14 THEN 'Android 5.x'
+                        END);
+```
 >更多：用户自定义函数， 表值函数， 标量值函数.  
 （详见文章： 关系数据库SQL之可编程性函数（用户自定义函数））
 
@@ -392,16 +401,90 @@ http://www.blogjava.net/rain1102/archive/2011/05/16/350301.html
 
 # tips: 存储过程中纪录日志方法
 ```
+
+# 初始化
 drop table if exists p_log;
-create table p_log as select 'p_name','log' ,SYSDATE();
-select * from p_log;
+create table p_log as select 1 'id','p_name','log' ,SYSDATE() date;
 
 
-insert into p_log value('p_name',' log ',SYSDATE());
-
-
-select * from p_log; #  存储过程, 进度监控
+select * from p_log; # 存储过程,进度监控
 ```
+
+```
+# 标记主键,更新长度
+ALTER TABLE `p_log`
+MODIFY COLUMN `id`  int(1) NOT NULL AUTO_INCREMENT FIRST ,
+MODIFY COLUMN `p_name`  varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' AFTER `id`,
+MODIFY COLUMN `log`  varchar(1024) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' AFTER `p_name`,
+ADD PRIMARY KEY (`id`);
+
+
+# 插入测试
+insert into p_log value(null,'p_name','log',SYSDATE());
+select * from p_log; ```
+
+
+# 流程控制
+```
+14.6.5.1 CASE Syntax # 分支（同switch case）
+14.6.5.2 IF Syntax
+14.6.5.3 ITERATE Syntax    # 重新开始循环（同continue）
+14.6.5.4 LEAVE Syntax  #  LEAVE    结束标签（同break）
+14.6.5.5 LOOP Syntax # 循环（同for）
+14.6.5.6 REPEAT Syntax    # 循环
+14.6.5.7 RETURN Syntax
+14.6.5.8 WHILE Syntax     # 循环
+```
+```
+CREATE PROCEDURE doiterate(p1 INT)
+BEGIN
+  label1: LOOP
+    SET p1 = p1 + 1;
+    IF p1 < 10 THEN
+      ITERATE label1; # 重新开始循环（同continue）
+    END IF;
+    LEAVE label1; #  LEAVE    结束标签（同break）
+  END LOOP label1;
+  SET @x = p1;
+END;
+```
+`MySQL :: MySQL 5.7 Reference Manual :: 14.6.5 Flow Control Statements`
+http://dev.mysql.com/doc/refman/5.7/en/flow-control-statements.html
+
+
+
+`MySQL :: MySQL 5.7 Reference Manual :: 14.6.5.5 LOOP Syntax`
+http://dev.mysql.com/doc/refman/5.7/en/loop.html
+
+
+
+# 计划任务
+```
+drop EVENT IF EXISTS e_test;
+
+
+CREATE EVENT `e_test`
+    ON SCHEDULE EVERY 5 SECOND
+    ON COMPLETION NOT PRESERVE
+    ENABLE
+    DO
+    insert into p_log value('event','x',SYSDATE());
+```
+```
+#1) 临时关闭事件
+ALTER EVENT e_test DISABLE;
+ 
+# 2) 开启事件
+ALTER EVENT e_test ENABLE;
+```
+`MySQL :: MySQL 5.7 Reference Manual :: 14.1.12 CREATE EVENT Syntax`
+http://dev.mysql.com/doc/refman/5.7/en/create-event.html
+
+
+`详解 MySQL 的计划任务 - 开源中国社区`
+http://www.oschina.net/question/4873_20927
+
+
 
 
 # 数据字典

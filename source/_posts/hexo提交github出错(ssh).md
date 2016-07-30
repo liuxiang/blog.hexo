@@ -63,4 +63,21 @@ Enter same passphrase again:<再次输入加密串>
 
 - hexo重新提交 `hexo d`
 
+
+---
+#  上传操作  hexo d  报错spawn git ENOENT
+```
+Error: spawn git ENOENT
+    at exports._errnoException (util.js:746:11)
+    at Process.ChildProcess._handle.onexit (child_process.js:1053:32)
+    at child_process.js:1144:20)
+    at process._tickCallback (node.js:355:11)
+```
+未添加Git环境变量引起，添加Git与git管理库的环境变量即可；
+```
+D:\Git\bin;D:\Git\libexec\git-core
+ ```
+`hexo 部署至Git遇到的坑 - 简书`
+http://www.jianshu.com/p/67c57c70f275
+
 <!-- more -->

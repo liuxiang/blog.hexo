@@ -16,7 +16,12 @@ tags: [javaScript,javaScript风格]
  
 })();
 ```
+
+
+# WebStorm  设置文件模板 `搜-template`->Editor-`File and code Templates`
  
+
+
 # 构造方法,风格编码
 * 优点-引导程序员,更有条理的编写代码[干净,易读,好维护]
 ```

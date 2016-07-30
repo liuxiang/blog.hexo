@@ -104,6 +104,12 @@ Is this ok? (yes)
 > 方式二: 为减少误操作,可先备份(或重命名)`package.json`,再 `npm init`同样会 依据`node_modules`的实际安装情况,更新` dependencies `配置项
 
 
+> 如何把node_module所有模块的版本信息更新到package.json中？
+重新执行npm init
+
+
+
+
 # 未能解决的问题
 *  依据`node_modules`的实际安装情况恢复配置项时无法信息判断恢复位置[ dependencies,devD ependencies ]
 

@@ -39,6 +39,14 @@ http://www.tuicool.com/articles/MFn2Uj
 # 四，ES7中的async和await
 
 
+# 异步 API
+
+- fetch
+- service worker
+- web worker
+这几个是JavaScript异步编程的API
+
+
 ---
 **参考**
 `Javascript异步编程的发展`

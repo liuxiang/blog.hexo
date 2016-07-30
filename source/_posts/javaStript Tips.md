@@ -157,6 +157,16 @@ new声明的是一个对象，而不是函数
 ```
 
 
+# 隐性参数列表 arguments
+```
+function fn(){
+    console.log("arguments",arguments);// arguments ["hello", "world"]
+}
+ 
+fn("hello","world");
+```
+
+
 # call & apply
 call，apply都是改变函数执行时的上下文，即this的环境。常结合`call & inherits`实现对象继承
 ```

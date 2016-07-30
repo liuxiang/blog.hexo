@@ -82,8 +82,8 @@ tags: [善用佳软]
 |PDMReader数据字典阅读器官方网站| 数据库常用软件 PowerDesigner的辅助工具 |
 |光速搜索 |小巧灵敏的搜索工具[盛大出品]|
 |思维导图 | xMind |
-| 文件批量重命名 | antrenamer2|
-| 文件批量重命名 | renamer |
+| 文件批量重命名  |  antrenamer2 |
+| 文件批量重命名  |  renamer  |
 
 
 #  system Tool
