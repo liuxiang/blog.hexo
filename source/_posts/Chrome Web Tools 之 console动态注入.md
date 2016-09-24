@@ -56,6 +56,10 @@ console.inject = function (library) {
  
       getURLs();
     }
+
+
+console.inject('jquery'); 
+
 ```
 
 

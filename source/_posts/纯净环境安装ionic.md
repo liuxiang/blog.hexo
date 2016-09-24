@@ -16,6 +16,13 @@ https://nodejs.org/en/download/releases/
 `ionic start myApp tabs`
 
 
+`更多 ionic start` 
+http://www.ionic.wang/start-index.html
+
+https://github.com/driftyco/ionic-cli
+
+
+
 #  3 .ionic添加`platform(平台)`,  出错-缺少android-SDK支持
 
 `ionic platform add android`或`cordova platform add android`

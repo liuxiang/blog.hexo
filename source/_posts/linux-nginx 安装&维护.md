@@ -59,31 +59,16 @@ wget http://nginx.org/download/nginx-1.11.2.tar.gz
 tar -zxvf nginx-1.11.2.tar.gz
 cd nginx-1.11.2
 ./configure &&   make && make install
-
-
-cd /usr/local  # 或 cd ..
-sudo chown -R sysadmin nginx/ # 更换文件所有权
-
-# 优点:区别于其它用户的权限,避免了权限公开
-# 缺点:文件的原所有者(root)将失去管理权.但可以还原所有者来归还权限
 ```
 
 
-## 或：考虑分配专有业务账号维护nginx
--  优点:分权管理,目录权限不需要费心去维护了
-- 缺点:多业务维护时,可能需要频繁切换用户
+## 或：指定目录安装
 ``` 
+
 tar -zxvf nginx-1.11.2.tar.gz
 cd nginx-1.11.2
 ./configure --prefix=/home/nginx/nginx # 更换nginx安装路径
 make && make install
-
-
-cd  /home/nginx   # 或 cd ..
-sudo chown -R sysadmin nginx/ # 更换文件所有权
-
-# 优点:区别于其它用户的权限,避免了权限公开
-# 缺点:文件的原所有者(root)将失去管理权.但可以还原所有者来归还权限
 ```
 
 

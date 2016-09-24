@@ -39,11 +39,13 @@ Ctrl+Shift+A `setting`
 
 
 ```
-Program:`C:\Ruby22-x64\bin\scss.bat`
+Program: C:\Ruby22-x64\bin\scss.bat
 Arguments:
-默认：`--no-cache --update $FileName$:$FileNameWithoutExtension$.css`
-修改：`--no-cache --update $FileName$:$FileParentDir$\www\css\$FileNameWithoutExtension$.css`
+默认：--no-cache --update $FileName$:$FileNameWithoutExtension$.css
+修改：--no-cache --update $FileName$:$FileParentDir$\www\css\$FileNameWithoutExtension$.css
 ```
+
+ 
 
 
 # 编译错误: 编码问题

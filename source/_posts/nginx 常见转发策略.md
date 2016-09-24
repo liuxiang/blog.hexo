@@ -27,6 +27,21 @@ tags: [nginx]
                                 rewrite ^(.*)$  https://git.oschina.net/wosaitech/release;
                 }
 ```
+
+
+# 无`www`域名，自动重定向到带`www`域名下。注意后缀要留
+```
+    server{
+        listen       80;
+        server_name  saixueba.com;
+        location / {
+             rewrite ^(.*)$ http://www.saixueba.com/$1 permanent;
+        }
+ 
+    }
+```
+
+
 # 负载均衡
 位置: vim /usr/local/nginx/conf/nginx.conf
 ```

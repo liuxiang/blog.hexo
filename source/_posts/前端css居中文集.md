@@ -86,31 +86,39 @@ display:flex 多栏多列布局
 # 垂直居中
 ## 行内元素或者行内块级元素？(inline 或者 inline-block)
 
-*   单行(line-height与heigth相等,配合center)
+-  单行(line-height与heigth相等,配合center)
 `pading-top:10px; pading-bottom:10px`
-```
-height: 100px;
-line-height: 100px;
-text-align: center;
-```
-
-
-*   多行(vertical-align:middle)
 ```
 height: 100px;
 line-height: 100px;
 white-space: nowrap;
 ```
-*   多行 垂直 居中- flex Box 垂直居中
+- 多行 垂直 居中- flex Box 垂直居中
+
+
+方法一：   display: `table-cell` && ` vertical-align: middle`;
+```
+.parent {
+  display: table;
+  width: 200px;
+  height: 400px;
+}
+.child {
+  display: table-cell;
+  vertical-align: middle;
+}
+```
+方法二
 ```
 .flex-center-vertically {
+
     display: flex;
     justify-content: center;
     flex-direction: column;  /* 决定主轴的方向（即项目的排列方向） */
     height: 400px;
 }
 ```
-*   inline-block 垂直 居中
+-  inline-block 垂直 居中(` ::before` && ` inline-block` && ` vertical-align : middle ` ) - 单行
 ```
 .ghost-center {
     position: relative;
@@ -164,11 +172,14 @@ white-space: nowrap;
     flex-direction: column; /* 决定主轴的方向（即项目的排列方向） */
     justify-content: center;
 }
+align-items: center;         /* -垂直居中*/
+
 ```
 
 
 ## 横竖都居中
-*   元素固定宽高
+-  元素固定宽高
+
 ```
 .parent {
     position: relative;
@@ -186,7 +197,7 @@ white-space: nowrap;
     margin: -70px 0 0 -170px;
 }
 ```
-*   不确定元素的宽高？
+-  transform控制方法
 ```
 .parent {
     position: relative;
@@ -198,40 +209,141 @@ white-space: nowrap;
     transform: translate(-50%, -50%);
 }
 ```
-*   flex Box 横竖都居中
+- 父子容器配合
+
 ```
 .parent {
-    display: flex;                         /* 父级 flex Box布局 */
-    justify-content: center;      /* -水平居中*/
-    align-items: center;            /* -垂直居中*/
+     margin: auto; /* 解决垂直居中，水平居中并不能生效 */
+    display: flex;
+}
+ 
+.child {
+    margin: auto;/* 依赖父级的flex布局，可以使用margin：auto；解决水平居中 */
 }
 ```
-或
+### `margin: auto;`生效条件 
+- 文档声明: DOCTYPE声明
+
+- 生效场景`(自元素宽度小于父级元素宽度时auto可生效)`
+    -  当前标签要求: 自元素需要有宽度(或说自身宽度小于父级宽度,可生效Auto)  
+
+     - 父级 display: flex;  自元素可使用auto
+- 失效场景
+    - 自身无宽度或宽度与父级一致再或超过父级
+
+    - 浮动了
+-  `margin: 0 auto;`与` text-align:center; `区别
+    -  `margin: 0 auto;` 通过外边距使自身居中显示
+
+    -  ` text-align:center; ` 通知子集依据自身的位置及宽度, 居中显示
+
+
+
+## 全屏方式
+- 兼容性最好
+```
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+```
+- 依据可视宽高(简单)
+```
+    position: absolute;
+
+    height: 100vh;
+    width: 100vw;
+```
+- 受父级容器影响
+```
+    position: absolute;
+
+     width: 100%;
+    height: 100%;
+```
+
+
+##  全屏方式 , flex Box 横竖都居中
+- 不遮盖背景(非全屏,相对全屏横竖居中)
+```
+    /*  容器位置起点(右上角)居中  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+
+    /* 内容横竖回退50%,使其内容同时居中 */
+
+    transform: translate(-50%, -50%);
+```  
+
+  
+-  铺满全屏
 ```
 .parent {
 
-     display: flex;            \*父级 flex Box布局 *\
+    /* 使容器铺满全屏 */
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+ 
+    /* 设置弹性布局,子集横竖居中 */
+    display: flex;                      /*父级flex Box布局*/
+    justify-content: center;    /* -水平居中*/
+    align-items: center;         /* -垂直居中*/
 }
-. child  {
-        margin: auto;       \* 内容可设置margin:auto *\
+
+
+/* 子集处于横竖居中位置 */
+```
+**父级(全屏) | 子集(不 遮盖父级 ,居中) **
+
+   
+
+
+
+或(父子容器配合)
+
+```
+.parent {
+
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    
+    display: flex;         \*父级flex Box布局*\
+
+}
+
+
+.child {
+     margin: auto;     \* 内容可设置margin:auto *\
 }
 ```
+** 父级(全屏) | 子集(遮盖父级,用外边距使子集相对居中)**
 
+ 
 
+- 分析
 `justify-content: center`会改变`.  parent `自身面板位置.
 如希望子集其它元素不受影响，可以在子集元素中配合`margin:auto` 使用.  或使用` display: -webkit-box `布局：
 ```
     display: -webkit-box;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
+    -webkit-box-pack: center;    /* -水平居中: 其中一半空间被置于首个子元素前，另一半被置于最后一个子元素后 */
+    -webkit-box-align: center;    /* -垂直居中: 其中 一半位于子元素之上，另一半位于子元素之下 */
 ```
+- 定义
+    -  box-pack 属性规定当框大于子元素的尺寸，在何处放置子元素。
+
+    - box-align 属性规定如何对齐框的子元素 。
 
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-4-24/75684487.jpg)
 <!-- 
     -->
-
-
+ 
 
 # ===========================================> 更多,更强
 
@@ -367,6 +479,10 @@ http://www.tuicool.com/articles/QrUZzyu
 
 `这可能是史上最全的CSS自适应布局总结`
 http://www.tuicool.com/articles/rYjyiyz
+
+
+`CSS布局自适应等分比例实践-前端开发博客`
+http://caibaojian.com/css-equal-layout.html
 
 
 # 工具 

@@ -38,8 +38,23 @@ vi catalina.sh
 ```
 
 
+- 多个tomcat,需更新环境变量
+```
+vi /usr/local/apache-tomcat-7.0.70/bin/startup.sh
+
+
+
+CATALINA_BASE="/usr/local/apache-tomcat-7.0.62"
+CATALINA_HOME="/usr/local/apache-tomcat-7.0.62"
+```
+> windows
+set "CATALINA_BASE=/usr/local/apache-tomcat-7.0.62"
+set  " CATALINA_HOME=/usr/local/apache-tomcat-7.0.62"
+
+
 - 启动
 ```
+
 # 启动tomcat
 /usr/local/apache-tomcat-7.0.70/bin/startup.sh
 

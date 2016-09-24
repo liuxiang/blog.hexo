@@ -21,5 +21,17 @@ http://my.oschina.net/u/141149/blog/311288
 
 
 
+---
+
+# 快捷命令模板 (live Template)
+- 效果
+
+- 快捷键(完整内容setting里查看,搜`live Template`)
+ 
+ 
+
+
+
+
 <!-- more -->
 

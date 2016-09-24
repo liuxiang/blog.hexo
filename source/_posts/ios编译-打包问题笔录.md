@@ -1,4 +1,4 @@
-title: ios问题笔录
+title: ios 编译/打包问题笔录 
 date: 2015-12-14 00:00:01 #发表日期，一般不改动
 categories: ios  #文章文类
 tags: [ ios ,  ios问题笔录 ]
@@ -73,11 +73,11 @@ http://blog.csdn.net/ddd998/article/details/50673592
 ```
 
 
-问题二： 使用的PP 文件 中配置的Certificates证书，没有下载到本机钥匙扣。
-
-
 ---
-# no identities from profile
+
+
+#  使用的PP 文件 中配置的Certificates证书，没有下载到本机钥匙扣。
+- no identities from profile
 
 
 ```

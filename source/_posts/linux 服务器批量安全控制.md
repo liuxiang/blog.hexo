@@ -16,6 +16,7 @@ sudo cat /etc/ssh/sshd_config |grep Port
 
 
 # linux ssh禁止root登陆.md
+- 新建替代root的管理用户
 ```
 
 adduser sysadmin
@@ -24,19 +25,22 @@ passwd sysadmin    # 修改密码
 
 grep sysadmin /etc/passwd # 查看用户是否存在
 
-
-
+```
+- 同步用户环境变量
+```
 cp -rf .bashrc /home/sysadmin/
 cp -rf cfg /home/sysadmin/
-
-
+```
+- 为新建的用户（sysadmin）赋予sudo权限
+```
 echo 'sysadmin  ALL=(ALL)    NOPASSWD:ALL' >> /etc/sudoers 
 # 或手动: sudo vim  /etc/sudoers
 
 sudo cat /etc/sudoers |grep "ALL=(ALL)"
 
-
-
+```
+- 关闭root用户的ssh通道（即禁止root登陆）
+```
 sudo sed -i "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
 sudo   cat /etc/ssh/sshd_config |grep PermitRootLogin
 
@@ -110,6 +114,21 @@ sudo /etc/init.d/sshd restart
 
 
 # 二 . linux ssh禁止root登陆.md
+- 恢复root用户的ssh通道（即 恢复 root登陆）
+```
+sudo sed -i "s/PermitRootLogin no/PermitRootLogin yes/g" /etc/ssh/sshd_config
+sudo cat /etc/ssh/sshd_config |grep PermitRootLogin
+
+
+sudo /etc/init.d/sshd restart
+```
+- 回收：新建的用户（sysadmin）赋予sudo权限
+
+```
+sudo vim /etc/sudoers #  手动删除或注释  'sysadmin  ALL=(ALL)    NOPASSWD:ALL'  
+sudo cat /etc/sudoers |grep "ALL=(ALL)"
+```
+- 回收：新建替代root的管理用户
 ```
 
 userdel sysadmin #  仅删除用户帐号，而不删除相关文件。( 需手动删除用户主目录和邮件目录)
@@ -126,18 +145,6 @@ userdel -r sysadmin # -r 彻底删除（含用户主目录和邮件目录）
 grep sysadmin /etc/passwd
 
 ```
-```
-sudo vim /etc/sudoers #  手动删除或注释  'sysadmin  ALL=(ALL)    NOPASSWD:ALL'  
-sudo cat /etc/sudoers |grep "ALL=(ALL)"
-```
-```
-sudo sed -i "s/PermitRootLogin no/PermitRootLogin yes/g" /etc/ssh/sshd_config
-sudo cat /etc/ssh/sshd_config |grep PermitRootLogin
-
-
-sudo /etc/init.d/sshd restart
-```
-
 
 
 #  三. linux 限制普通用户su切换到 root.md

@@ -75,7 +75,7 @@ factorial(5, 1) // 120
 
 
 
-柯里化减少参数
+- 柯里化( Currying )减少参数
 ```
 function currying(fn, n) {
   return function (m) {
@@ -92,13 +92,61 @@ const factorial = currying(tailFactorial, 1);
  
 factorial(5) // 120
 ```
+- 柯里化还能循环中闭包使用timeout
+```
+  /**
+   * 异步执行函数,目的:页面同步刷新(柯里化)
+   * @param func
+   * @param time
+   * @returns {Function}
+   */
+  function asyn(func, time = 1000) {
+    return function (prom) {
+      setTimeout(function () {
+        return func.call(this, prom);
+      }, time)
+    }
+  }
 
 
-反柯里化
+function _forEach(start, end) {
+  asyn(function (prom) {
+    // console.log('dd', prom);
+    el('.nav-bar-title.ng-binding').triggerHandler('click');
+    asyn(function (prom) {
+      // console.log('dd2', prom);
+      el('.bookname_content>.bookname', prom).triggerHandler('click');
+      ++start <= end && dd(start, end);// 递归调用自己,相比for没有了时间计算
+    })(prom);
+  })(start);
+}
+
+
+_forEach(0, 2);// 启动
+```
+
+
+- 反柯里化
 ```
 Function.prototype.uncurry = function () {
   return this.call.bind(this);
 };
+```
+
+
+#  JavaScript中匿名函数的递归调用
+callee 是 arguments 对象的一个属性，其值是当前正在执行的 function 对象。 它的作用是使得匿名 function 可以被递归调用。 下面以一段计算斐波那契序列（Fibonacci sequence）中第 N 个数的值的代码来演示 arguments.callee 的使用
+```
+function fibonacci(num) {
+    return (function(num) {
+        if (typeof num !== "number") return -1;
+        num = parseInt(num);
+        if (num < 1) return -1;
+        if (num == 1 || num == 2) return 1;
+        return arguments.callee(num - 1) + arguments.callee(num - 2);
+    })(num);
+}
+fibonacci(100);
 ```
 
 
@@ -141,12 +189,26 @@ new声明的是一个对象，而不是函数
 
 # 隐性参数列表 arguments
 ```
-function fn(){
+function fn(a,b,c){
     console.log("arguments",arguments);// arguments ["hello", "world"]
 }
  
 fn("hello","world");
 ```
+```
+  function fn(func, b, c) {
+    var _arguments = arguments;
+    return function (src) {
+      func.apply(null, _arguments);// 传递参数
+    }
+  }
+
+
+var func =  fn(alert, 2,3);
+func ("world");
+```
+
+
 
 
 # call & apply
@@ -293,8 +355,126 @@ const：用于声明常量，也具有块级作用域
 http://blog.csdn.net/u012786716/article/details/50740710
 
 
+# 快捷逻辑
+```
+true  && console.log('1');// 1
+false && console.log('2'); 
+ 
+true  || console.log('3');
+false || console.log('4');// 4
+```
 
 
+#  延展操作符(Spread operator) 
+> （类似知识点： 隐性参数列表 arguments）
+
+
+这个 … 操作符（也被叫做延展操作符 － spread operator）已经被 ES6 数组 支持。它允许传递数组或者类数组直接做为函数的参数而不用通过apply。
+
+
+```
+function a(...args){
+    console.log('a',args); // a [1, 2, 3]
+    b(args); // b [1, 2, 3] undefined undefined
+    b(...args); // b 1 2 3
+}
+ 
+function b(a,b,c){
+    console.log("b",a,b,c);
+}
+ 
+a(1,2,3);
+```
+
+
+# ES6字符串模板 Template Literals（模板对象） in ES6
+```
+function ss() {
+  var service = {
+    _kingRank: `/acticity/question/kingRank/${userId}/?pageSize=:pageSize&currentPage=:currentPage`,
+    _friendsHelp: '/acticity/question/friendsHelp/:userId/?pageSize=:pageSize&currentPage=:currentPage'
+  }
+  return service;
+}
+var userId = 2; // 变量提升了
+console.log(ss()._kingRank);// /acticity/question/kingRank/2/?pageSize=:pageSize&currentPage=:currentPage
+```
+```
+function ss() {
+  var service = {
+    _kingRank: `/acticity/question/kingRank/${userId}/?pageSize=:pageSize&currentPage=:currentPage`,
+    _friendsHelp: '/acticity/question/friendsHelp/:userId/?pageSize=:pageSize&currentPage=:currentPage'
+  }
+  return service;
+}
+function ff(){
+  var userId = 2;
+  console.log(ss()._kingRank);// error 找不到 userId
+}
+ff();
+```
+
+
+# 程序断点
+Chrome会自动在插入它的地方停止
+
+```
+if (thisThing) {
+    debugger;
+}
+```
+
+
+# 快速定位调试函数 `debug(funcName)`
+当我们想在函数里加个断点的时候，一般会选择这么做：
+  1.在Inspector中找到指定行，然后添加一个断点
+  2.在脚本中添加一个debugger调用
+ 
+不过这两种方法都存在一个小问题就是都要到对应的脚本文件中然后再找到对应的行，这样会比较麻烦。这边介绍一个相对快捷点的方法，就是在console中使用debug(funcName)然后脚本会在指定到对应函数的地方自动停止。这种方法有个缺陷就是无法在私有函数或者匿名函数处停止，所以还是要因时而异：
+```
+var func1 = function() {
+func2();
+};
+ 
+var Car = function() {
+this.funcX = function() {
+this.funcY();
+}
+ 
+this.funcY = function() {
+this.funcZ();
+}
+}
+ 
+var car = new Car();
+```
+
+ 
+# JavaScript截取字符串的Slice、Substring、Substr函数详解和比较
+```
+'第七章力'.slice(0,-1);// 第七章
+'第七章力'.substr(0,-1);// ""
+'第七章力'.substring(0,-1); // ""
+ 
+'第七章力'.slice(0,'第七章力'.indexOf('章')+1);//  第七章
+'第七章力'.substr(0,'第七章力'.indexOf('章')+1);//  第七章
+```
+`JavaScript截取字符串的Slice、Substring、Substr函数详解和比较_javascript技巧_脚本之家`
+http://www.jb51.net/article/48257.htm
+
+
+`JavaScript 数组：对比 slice 与 splice - 推酷`
+http://www.tuicool.com/articles/MZ77Nvz
+
+
+
+# 除自己,选择姐妹标签(siblings)
+```
+
+$('.navbar_rank').on('click', '.switch', function () {
+     $(this).addClass('activity').siblings('.activity').removeClass('activity');
+});
+```
 
 
 ---
@@ -310,6 +490,23 @@ http://www.tuicool.com/articles/MZfuA3r
 `12个JavaScript技巧 - 推酷`
 http://www.tuicool.com/articles/uyMNraF
 
+
+
+`JavaScript调试十个小Tips - 推酷`
+http://www.tuicool.com/articles/RnmA3mR
+
+
+`搜索 JavaScript Tips - 推酷`
+
+http://www.tuicool.com/search?kw=JavaScript+Tips
+
+
+`console 让 js 调试更简单 - 推酷`
+http://www.tuicool.com/articles/ymm6nan
+
+
+`Web程序员必须知道的 Console 对象里的九个方法 - 推酷`
+http://www.tuicool.com/articles/bANryqF
 
 
 <!-- more -->

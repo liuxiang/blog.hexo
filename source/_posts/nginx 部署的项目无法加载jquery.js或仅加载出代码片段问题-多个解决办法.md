@@ -18,6 +18,16 @@ tags: [linux, nginx ]
 2016/07/22 17:54:59 [crit] 4281#0: *441 open() "/usr/local/nginx/proxy_temp/2/00/0000000002" failed (13: Permission denied) while reading upstream, client: 115.197.165.164, server: , request: "GET /teach_pc/js/jquery-1.11.2.min.js HTTP/1.1", upstream: "http://127.0.0.1:8080/teach_pc/js/jquery-1.11.2.min.js", host: "121.40.195.52"
 
 ```
+
+
+- 如后端并没有此提示或问题出在tomcat服务容器中，有一种可能是数据磁盘满了。
+```
+df -h # 查看磁盘占用情况
+```
+在任意目录 vi 写入内容，也会有提示`E514: write error (file system full?) `(文件系统已满)
+
+
+
 - 问题原因
 ```
 看一下nginx 反向代理参数说明

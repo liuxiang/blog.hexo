@@ -126,4 +126,13 @@ http://my.oschina.net/xinxingegeya/blog/395484
 http://blog.sina.com.cn/s/blog_b2fa1f6a01012n38.html
 
 
+---
+# 关系文章
+post[form-data 与 x-www-form-urlencoded区别]-无参数.md
+
+post[form-data 与 x-www-form-urlencoded区别]-有参数.md
+
+application/x-www-form-urlencoded和multipart/form-data的区别.md
+
+
 <!-- more -->

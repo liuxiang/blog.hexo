@@ -8,6 +8,19 @@ tags: [ 前端, 异步编程, callBack,Promise,Generator,async-await ]
 
 
 ---
+# github搜索`<script>window.Promise || document.write`
+
+
+https://github.com/search?q=%3Cscript%3Ewindow.Promise+%7C%7C+document.write&type=Code&utf8=%E2%9C%93
+
+
+ 
+`ES6-Promise (subset of rsvp.js)`
+https://github.com/stefanpenner/es6-promise
+
+
+
+---
 # 一，callback
 
 
@@ -48,6 +61,63 @@ http://www.tuicool.com/articles/MFn2Uj
 
 
 ---
+# 如何做到兼容：
+## 方法一：通过Polyfill 类库
+`jakearchibald/es6-promise`:一个兼容 ES6 Promises 的Polyfill类库。 它基于 RSVP.js 这个兼容 Promises/A+ 的类库， 它只是 RSVP.js 的一个子集，只实现了Promises 规定的 API。
+`yahoo/ypromise`: 这是一个独立版本的 YUI 的 Promise Polyfill，具有和 ES6 Promises 的兼容性。
+`getify/native-promise-only`: 以作为ES6 Promises的polyfill为目的的类库 它严格按照ES6 Promises的规范设计，没有添加在规范中没有定义的功能。 如果运行环境有原生的Promise支持的话，则优先使用原生的Promise支持。
+
+
+## 方法二：通过扩展类库
+`then/promise`: a super set of ES6 Promises designed to have readable, performant code and to provide just the extensions that are absolutely necessary for using promises today.
+`petkaantonov/bluebird`: 这个类库除了兼容 Promise 规范之外，还扩展了取消promise对象的运行，取得promise的运行进度，以及错误处理的扩展检测等非常丰富的功能，此外它在实现上还在性能问题下了很大的功夫。
+`when`: 大小很小,node和浏览器环境下都可以使用。
+`q`: 类库 Q 实现了 Promises 和 Deferreds 等规范。 它自2009年开始开发，还提供了面向Node.js的文件IO API Q-IO 等， 是一个在很多场景下都能用得到的类库。
+ 
+`Promise之深度解析 - 简书`
+http://www.jianshu.com/p/e0bb0083220e
+
+
+`Promise实战 | 前端工程师手册`
+https://leohxj.gitbooks.io/front-end-database/content/javascript-asynchronous/use-promise.html
+
+
+
+---
+
+# Promise 的现行解决方案
+其实已经有一些第三方库实现了 Promise 的功能：
+- Q
+- when
+- WinJS
+- RSVP.js
+
+
+上面这些库和 JavaScript 原生 Promise 都遵守一个通用的、标准化的规范：Promises/A+，jQuery 有个类似的方法叫 Deferred，但不兼容 Promises/A+ 规范，于是会有点小问题，使用需谨慎。jQuery 还有一个 Promise 类型，它其实是 Deferred 的缩减版，所以也有同样问题。
+
+
+尽管 Promise 的各路实现遵循同一规范，它们的 API 还是各不相同。JavaScript Promise 的 API 比较接近 RSVP.js，如下创建 Promise：
+```
+var promise = new Promise(function(resolve, reject) {
+  // do a thing, possibly async, then…
+ 
+  if (/* everything turned out fine */) {
+    resolve("Stuff worked!");
+  }
+  else {
+    reject(Error("It broke"));
+  }
+});
+```
+`JavaScript Promise：去而复返 - 司徒正美 - 博客园`
+http://www.cnblogs.com/rubylouvre/p/3495286.html
+
+
+`JavaScript Promises 初体验 - 王铁手的博客 - SegmentFault`
+https://segmentfault.com/a/1190000002507303
+
+
+---
 **参考**
 `Javascript异步编程的发展`
 
@@ -69,6 +139,16 @@ http://www.tuicool.com/articles/IvuA7rb
 3.憧憬未来之generater
 
 ```
+
+
+`谈谈 ES6 的 Promise 对象 - ac黄博客精选 - SegmentFault`
+
+https://segmentfault.com/a/1190000002928371
+
+
+
+`jQuery的deferred对象详解 - 阮一峰的网络日志`
+http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html
 
 
 <!-- more -->
