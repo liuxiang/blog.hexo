@@ -1,0 +1,61 @@
+title: webstorm 使用External Tools-实现运行支持ES6
+date: 2016-10-11 00:00:02
+tags: [ webstorm   ]
+
+
+
+---
+# 配置
+<!--
+-->
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/public/16-11-19/1251529.jpg)
+
+
+<!--
+-->
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/public/16-11-19/28341988.jpg)
+
+
+Program：`C:\Users\Administrator\AppData\Roaming\npm\babel-node.cmd`
+Parameters：`$FilePath$`
+
+
+## 运行，右键 ： 选择External Tools-`babel-node`
+```
+C:\Users\Administrator\AppData\Roaming\npm\babel-node.cmd G:\liuxiang_code_git\liuxiang_web\src\ES6\Modules-diligenceday\demo\main.js
+121
+5
+```
+
+
+---
+# webstrorm内运行`*.cmd`文件
+<!--
+-->
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/public/16-11-19/91456091.jpg)
+
+
+Program：` $FilePath$`
+Parameters：`<不需要>`
+
+
+- dir_.cmd 右键： 选择External Tools-`cmd`
+```
+dir
+
+```
+## 效果
+```
+G:\liuxiang_code_git\liuxiang_web\src\ES6\Modules-diligenceday\demo\dir_.cmd
+ 
+G:\liuxiang_code_git\liuxiang_web>dir
+驱动器 G 中的卷是 Work-SSD
+卷的序列号是 0FD9-0AF8
+ 
+G:\liuxiang_code_git\liuxiang_web 的目录
+ 
+2016/10/11 周二  16:09    <DIR>          .
+2016/10/11 周二  16:09    <DIR>          ..
+2016/10/11 周二  15:12                36 .babelrc
+2016/03/02 周三  10:39               242 .editorconfig
+```

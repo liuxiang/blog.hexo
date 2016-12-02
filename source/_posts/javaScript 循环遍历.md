@@ -112,4 +112,21 @@ VM595:3 Object {a: 1, b: 2} "b" 2
 `JavaScript对Json的增删改属性 - xerxes的专栏 - 博客频道 - CSDN.NET`
 http://blog.csdn.net/shangliuyan/article/details/8072257
  
+---
+```
+var lis = document.querySelectorAll('li');
+for(var i=0;i<lis.length;i++){
+    if(lis[i].style.cssFloat=="left"){
+       lis[i].style.cssFloat="right";
+    }else if(lis[i].style.cssFloat=="right"){
+        lis[i].style.cssFloat="left";
+    }
+}
+ 
+同时说明一下，对于上面的lis不能够使用foreach()，因为lis是NodeList,不是List，也不是数组，不能使用for-each循环。
+```
+`如何循环遍历document.querySelectorAll方法返回的结果`
+https://zhidao.baidu.com/question/1756737727649600028.html
+
+
 <!-- more -->

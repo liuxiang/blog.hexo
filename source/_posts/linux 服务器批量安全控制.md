@@ -41,42 +41,52 @@ sudo cat /etc/sudoers |grep "ALL=(ALL)"
 ```
 - 关闭root用户的ssh通道（即禁止root登陆）
 ```
+# 更新配置
 sudo sed -i "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
+# 查看
 sudo   cat /etc/ssh/sshd_config |grep PermitRootLogin
 
 
+# 重启生效
 sudo /etc/init.d/sshd restart
 ```
 
 # linux 限制普通用户su切换到 root.md
 ```
 
+# 修改sysadmin用户分组为wheel
 usermod -g  wheel sysadmin
+# 查看
 id sysadmin
 
 
+# 更新配置（wheel组外用户不允许切换至root）
 sudo vim /etc/pam.d/su # auth required pam_wheel.so use_uid (解开此注释)
+# 查看
 sudo   cat /etc/pam.d/su |grep 'required'
 ```
 
 # linux 防火墙iptables设置.md
 ```
-iptables -A INPUT -i lo -j ACCEPT #允许来自于lo接口的数据包
-iptables -A INPUT -p tcp --dport 1997 -j ACCEPT #ssh端口22->1997
-# iptables -A INPUT -p tcp --dport 21 -j ACCEPT #FTP端口21
-iptables -A INPUT -p tcp --dport 80 -j ACCEPT #web服务端口80
-iptables -A INPUT -p tcp --dport 8080 -j ACCEPT #tomcat
-# iptables -A INPUT -p tcp --dport xxxx -j ACCEPT #mysql
-# iptables -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT #允许icmp包通过,也就是允许ping
-# iptables -A INPUT -p tcp -s 45.96.174.68 -j ACCEPT #如果要添加内网ip信任（接受其所有TCP请求）
-iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT #允许所有对外请求的返回包
-iptables -P INPUT DROP #过滤所有非以上规则的请求
-iptables -L -n --line-numbers # 所有iptables以序号标记显示
+sudo iptables -A INPUT -i lo -j ACCEPT #允许来自于lo接口的数据包
+sudo   iptables -A INPUT -p tcp --dport 1997 -j ACCEPT #ssh端口22->1997
+#  sudo  iptables -A INPUT -p tcp --dport 21 -j ACCEPT #FTP端口21
+sudo   iptables -A INPUT -p tcp --dport 80 -j ACCEPT #web服务端口80
+sudo   iptables -A INPUT -p tcp --dport 8080 -j ACCEPT #tomcat
+#  sudo   iptables -A INPUT -p tcp --dport xxxx -j ACCEPT #mysql
+#  sudo   iptables -A INPUT -p icmp -m icmp --icmp-type 8 -j ACCEPT #允许icmp包通过,也就是允许ping
+#  sudo   iptables -A INPUT -p tcp -s 45.96.174.68 -j ACCEPT #如果要添加内网ip信任（接受其所有TCP请求）
+sudo   iptables -A INPUT -m state --state ESTABLISHED -j ACCEPT #允许所有对外请求的返回包
+sudo   iptables -P INPUT DROP #过滤所有非以上规则的请求
+
+
+# 查看（ 所有iptables以序号标记显示 ）
+sudo iptables -L -n --line-numbers
 
 
 # 开机启动-chkconfig
-service iptables save # 保存现状
-chkconfig iptables on # 添加到自启动chkconfig
+sudo service iptables save # 保存现状
+sudo chkconfig iptables on # 添加到自启动chkconfig
 chkconfig --list | grep '3:on' # 检查开机启动
 ```
 
@@ -160,14 +170,20 @@ sudo   cat /etc/pam.d/su |grep 'required'
 
 ```
 # 清空规则(重置)
-iptables -P INPUT ACCEPT # 恢复默认允许访问(不恢复就麻烦了~)
-iptables -F # 清空默认所有规则
-iptables -X # 清空自定义的所有规则
-iptables -Z # 计数器置0
-iptables -L -n --line-numbers # 所有iptables以序号标记显示
+sudo   iptables -P INPUT ACCEPT # 恢复默认允许访问(不恢复就麻烦了~)
+sudo   iptables -F # 清空默认所有规则
+sudo   iptables -X # 清空自定义的所有规则
+sudo   iptables -Z # 计数器置0
 
 
-chkconfig iptables off # 删除
+# 查看（ 所有iptables以序号标记显示 ）
+
+sudo   iptables -L -n --line-numbers
+
+
+# 开机启动-chkconfig
+sudo service iptables save # 保存现状
+sudo   chkconfig iptables off # 删除
 chkconfig --list | grep '3:on' # 检查开机启动
 ```
 

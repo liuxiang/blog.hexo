@@ -279,6 +279,23 @@ Alt+F12 Terminal控制台
 再重新进行系统复制,尝试webstorm内粘贴是否可用.
 
 
+# 快速打开文件所在目录
+`Alt+F1` - 5
+
+
+
+
+
+# `File Structure`文件结构(当前文件中所有方法)
+`Alt+F1` - 4
+或 `Alt+7`
+
+ 
+ 
+# 到指定行的代码
+`Ctrl+G`
+
+
 ---
 # 网摘
 `★ 十大Intellij IDEA快捷键 - 西代零零发 - 博客频道 - CSDN.NET`

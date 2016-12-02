@@ -497,4 +497,17 @@ https://github.com/Erichain/css-center-complete
 
 
 
+---
+# 图片与文字垂直居中
+
+```
+img{
+     vertical-align: middle;
+
+}
+```
+`文字与图片在同一行垂直居中问题 `
+http://blog.csdn.net/tool163/article/details/7088236
+
+
 <!-- more -->

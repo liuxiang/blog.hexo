@@ -10,6 +10,11 @@ Quick Reference( wiki ) https://github.com/angular-ui/ui-router/wiki/Quick-Refer
 
 
 ---
+# ionic 禁止侧滑后退
+```
+//禁止侧滑后退事件
+$ionicConfigProvider.views.swipeBackEnabled(false);
+```
 
 
 # ionic中路由返回控制 ```

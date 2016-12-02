@@ -84,6 +84,17 @@ https://leohxj.gitbooks.io/front-end-database/content/javascript-asynchronous/us
 
 
 ---
+支持Promise 我们可以使用 lie
+
+https://github.com/calvinmetcalf/lie
+
+
+`ES6 + Webpack + React + Babel 如何在低版本浏览器上愉快的玩耍（下） - 推酷`
+http://www.tuicool.com/articles/rYRBbiA
+
+
+
+---
 
 # Promise 的现行解决方案
 其实已经有一些第三方库实现了 Promise 的功能：

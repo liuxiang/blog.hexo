@@ -15,10 +15,9 @@ function log(){
 ```
 
 
-- 减少了全局变量
-- 暴露所有的模块成员，内部状态可以被外部读写
-
+- 减少了全局变量 &  暴露所有的模块成员，内部状态可以被外部读写
 ```
+var myModule = {
     bar: function(){
         //do something
     },
@@ -101,7 +100,7 @@ console.log(add(1,1));//2
 ```
 
 
-## ADM(代表作:RequireJS )
+## AMD(代表作:RequireJS )
 - Asynchronous Module Definition，即异步的模块定义，是浏览器端的模块化规范，是 RequireJS 在推广过程中对模块定义的规范化产出
 
 
@@ -134,6 +133,9 @@ define('myModule',['jQuery','types/Employee'],function($,Employee){//定义模�
 ```
 define(factory)
 ```
+
+
+- AMD 是 依赖关系前置，提前执行 ；CMD 是类似于 CommonJS 那样 按需加载，延迟执行 ：
 ```
 //CMD recommanded
 define(function(require, exports, module){
@@ -200,7 +202,15 @@ requirejs.config({
 
 ---
 `前端模块化之旅（一）：因何生它 - 推酷`
+
 http://www.tuicool.com/articles/z2AFRfF
+
+
+`前端模块化之旅（二）：CommonJS、AMD和CMD - 推酷`
+www.tuicool.com/articles/ZFvIfmz
+ 
+`前端模块化之旅（三）：RequireJS模块化及r.js指南 - 推酷`
+http://www.tuicool.com/articles/qyInuum
 
 
 `Javascript模块化编程（一）：模块的写法 - 阮一峰的网络日志`

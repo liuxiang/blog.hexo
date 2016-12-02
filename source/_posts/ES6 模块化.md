@@ -3,7 +3,7 @@ date: 2016-09-15 00:00:00
 tags: [ES6]
  
 ---
-示例:  https://github.com/tildeio/rsvp.js
+示例:  https://github.com/tildeio/rsvp.js  #downloads
 - ES6编写
 - 支持 CommonJS, AMD模块化规范
 ```
@@ -16,6 +16,10 @@ tags: [ES6]
 })));
 ```
 ---
+
+
+现代浏览器对模块(module)支持程度不同， 目前都是使用babelJS， 或者Traceur把ES6代码转化为兼容ES5版本的js代码;
+
 
 
 # ES6的模块化的基本规则或特点
@@ -196,6 +200,7 @@ Object { file0: "file0" }
 ---
 `ES6新特性：使用export和import实现模块化 - 方方和圆圆 - 博客园`
 http://www.cnblogs.com/diligenceday/p/5503777.htm l
+http://www.tuicool.com/articles/EryUniv
 
 
 - ES6的模块化的基本规则或特点：

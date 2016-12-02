@@ -13,13 +13,9 @@ tags: [ WebStorm,scss ]
 
 需要安装`Ruby` & gem安装sass
 ```
-$ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
-$ gem sources -l
-*** CURRENT SOURCES ***
- 
-https://ruby.taobao.org
-# 请确保只有 ruby.taobao.org
-$ gem install sass
+gem sources -a http://gems.ruby-china.org/
+
+gem install sass
 ```
 
 

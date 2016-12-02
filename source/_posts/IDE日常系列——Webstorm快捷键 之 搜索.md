@@ -64,6 +64,21 @@ Ctrl+L 下一个
 Ctrl+shift+L 上一个
 
 
+# eclipse特色功能
+`搜索`  出现在文件中对象应用  Ctrl+Shift+U     ws:Alt+F7 (设置为范围为当前打开文件)
+
+或者 `Ctrl+F`(搜索) + `Ctrl+L`(下一个)
+
+
+
+- 清理不需要的展示
+ 
+ 
+
+
+`搜索` 文件中方法   Ctrl+O                     ws:Alt+7
+
+
 <!-- more -->
 
 

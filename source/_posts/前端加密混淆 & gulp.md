@@ -74,6 +74,29 @@ http://www.tuicool.com/articles/aae6vi
 ---
 
 
+
+```
+gulp-sourcemaps 生成source map，方便跟踪问题代码
+gulp-concat 合并文件
+gulp-uglify 压缩js
+gulp-minify-css 压缩css
+gulp-rev 为文件加上版本控制信息
+gulp-rev-collector 配合gulp-rev替换文件名
+gulp-jshint js代码检查
+run-sequence 顺序执行task
+```
+`gulp压缩合并静态文件 - 推酷`
+http://www.tuicool.com/articles/aae6vi
+
+
+`使用Gulp进行Javascript以及css压缩合并 - 推酷`
+http://www.tuicool.com/articles/IZR3AfV
+
+
+
+---
+
+
 * （cordova hook）[jshint,async] 检查javascript：这一步需要在代码压缩和代码混淆之前进行以保证javascript代码无错误
 * （gulp task）[gulp-angular-templatecache] 将html页面代码转换为angular的JS代码：这一步起到了混淆html页面代码的作用
 * （gulp task）[gulp-ng-annotate] 启用angular严格依赖注入：这一步需要在代码混淆之前进行以保证angular的依赖注入没有问题

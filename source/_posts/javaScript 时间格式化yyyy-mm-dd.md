@@ -381,4 +381,27 @@ console.log(date); // => 2016-03-25 11:01:01
 http://www.tuicool.com/articles/jiY3EfJ
 
 
+---
+# 打开浏览器-F12-控制台
+
+
+- 当前时间
+```
+Date.now();// 1477644601270
+```
+
+
+- 依据时间
+```
+new Date("2016-10-28 11:05:00").getTime();// 1477623900000
+```
+
+
+- 验证
+```
+var dt = new Date(1477623900000);
+dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset()); // 修正时区偏移
+var date = dt.toISOString().slice(0, -5).replace(/[T]/g, ' ');
+console.log(date); // => 2016-10-28 11:05:00
+```
 <!-- more -->

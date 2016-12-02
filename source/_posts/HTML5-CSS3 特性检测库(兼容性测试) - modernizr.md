@@ -86,6 +86,12 @@ Modernizr.load([
 
 
 ---
+http://html5test.com/
+
+ 
+---
+
+
 
 
 `Modernizr.js入门指南 - 推酷`
