@@ -55,8 +55,9 @@ chown -R sysadmin /usr/local/nginx # 或此
 ```
 > 此命令的-R会递归替换内部所有子文件（含 proxy_temp ）的所有者为root
 > 而nginx默认是使用nobody用户启动，由此nobody用户将无法更新目录 proxy_temp下的文件了
-    
 
+
+---
 
 
 - 解决办法一：更改 `proxy_temp/` 文件权限

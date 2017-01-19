@@ -1,12 +1,11 @@
-title: var functionName = function() {} vs function functionName() {}
+title:  匿名function
 date: 2016-03-26 00:00:00
 categories:
 tags: [匿名 function ]
 
 
 ---
-
-
+#  var functionName = function() {} vs function functionName() {}
 ```
 <script>
   // Error

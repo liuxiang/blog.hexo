@@ -209,6 +209,23 @@ EXECUTE stmt2 USING @a, @b;
 
 
 ---
+## 时间条件
+```
+drop table if exists tab; create table tab as
+select * from(
+    select '张三' name,'男' sex,18 age,SYSDATE() time
+    union select '李四','女',28,date_sub(SYSDATE(),interval 1 day)
+) tab;
+select * from tab;
+```
+```
+select * from tab where time > DATE_FORMAT('2016-11-30','%Y-%m-%d %H:%i:%s');
+select * from tab where time > DATE_FORMAT(str_to_date('2016-11-30','%Y-%m-%d'),'%Y-%m-%d %H:%i:%s');
+
+
+select * from tab where time > str_to_date('2016-11-30','%Y-%m-%d');
+select * from tab where time > '2016-11-30';
+```
 
 
 ## 多表查询

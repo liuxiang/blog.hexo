@@ -1,4 +1,4 @@
-title: ionic问题——在页面跳转前的Popups与页面调整后页面的Popups,同时出现会出现Popups无法关闭
+title: ionic问题——Popups无法关闭
 date: 2016-1-7 00:00:04 #发表日期，一般不改动
 categories: ionic  #文章文类
 tags: [ ionic , Popups ]

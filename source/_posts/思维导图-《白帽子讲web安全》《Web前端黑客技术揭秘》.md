@@ -9,12 +9,15 @@ photos:
 
 ---
 # 《白帽子讲web安全》
+[下载：`《白帽子讲web安全》.xmind`](https://github.com/liuxiang/xmind)
+
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/15-11-25/62627084.jpg)
 
 
 # 《Web前端黑客技术揭秘》
-![](http://7xnbs3.com1.z0.glb.clouddn.com/15-11-25/85612480.jpg)
+[下载：`《Web前端黑客技术揭秘》.xmind`](https://github.com/liuxiang/xmind)
+
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/15-11-25/85612480.jpg)
 
 
-# 暂还没空上网盘,需要的留邮箱
 <!-- more -->

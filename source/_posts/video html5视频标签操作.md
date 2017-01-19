@@ -72,3 +72,11 @@ isFullScreen: "webkitIsFullScreen"
 `HTML5 requestFullScreen&exitFullscreen全屏兼容方案`
 
 https://my.oschina.net/ososchina/blog/349660
+
+
+`HTML5的Video标签的属性,方法和事件汇总 - 简书`
+http://www.jianshu.com/p/404d01b8e713
+
+
+`HTML 音频/视频 | 菜鸟教程` `属性,方法和事件`
+http://www.runoob.com/tags/ref-av-dom.html

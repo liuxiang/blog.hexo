@@ -1,4 +1,4 @@
-title: chrome Developer  技巧 Event Listener Breakpoints 之 Timer - Clear Timer
+title: chrome Developer：Clear Timer
 date: 2015-10-06 00:00:00
 tags: [chrome]
  

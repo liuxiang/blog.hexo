@@ -7,9 +7,9 @@ photos:
 
 
 ---
-# iOS证书&打包&上架
-![](http://7xnbs3.com1.z0.glb.clouddn.com/15-11-25/57716199.jpg)
+[下载：`iOS证书&打包&上架.xmind`](https://github.com/liuxiang/xmind)
+
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/15-11-25/57716199.jpg)
 
 
-# 暂还没空上网盘,需要的留邮箱
 <!-- more -->

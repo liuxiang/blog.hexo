@@ -1,4 +1,4 @@
-title:  ionic cordova hook 加密混淆 & gulp[templatecache annotate useref]
+title:  ionic cordova hook 加密混淆
 date: 2016-05-10 00:00:00
 categories: 前端 加密 混淆
 
@@ -6,6 +6,8 @@ tags: [ 前端 加密 混淆 ， gulp， ionic ，cordova hook   ]
 
 
 ---
+#　ionic cordova hook 加密混淆 & gulp[templatecache annot
+
 
 
 * （cordova hook）[ jshint,async ] 检查javascript：这一步需要在代码压缩和代码混淆之前进行以保证javascript代码无错误

@@ -215,11 +215,15 @@ func ("world");
 call，apply都是改变函数执行时的上下文，即this的环境。常结合`call & inherits`实现对象继承
 ```
 function inherits(child, parent) {
-  var _proptotype = Object.create(parent.prototype);
-  _proptotype.constructor = child.prototype.constructor;
-  child.prototype = _proptotype;
+  var _proptotype = Object.create(parent.prototype); // 父级原型
+  _proptotype.constructor = child.prototype.constructor;// 子集构造,覆盖父级构造
+  child.prototype = _proptotype; // 父级原型覆盖子集原型
 }
 ```
+`JavaScript 精粹 - 推酷`
+http://www.tuicool.com/articles/Mv6zUr
+
+
 `区别` 参数使用方式不同
 
 ```
@@ -475,8 +479,100 @@ $('.navbar_rank').on('click', '.switch', function () {
      $(this).addClass('activity').siblings('.activity').removeClass('activity');
 });
 ```
+- weiui css
+```
+
+$('.shrink-items').on('click', '.shrink-item', function () {
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');// 已展开,收起来
+  } else {
+    $(this).addClass('active').siblings('.active').removeClass('active');// 切换展开
+  }
+});
+```
+
+等效
+```
+
+$('.shrink-item').on('click', function () {
+  if ($(this).hasClass('active')) {
+    $(this).removeClass('active');// 已展开,收起来
+  } else {
+    $(this).addClass('active').siblings('.active').removeClass('active');// 切换展开
+  }
+});
+```
 
 
+#  prototype原型扩展,与方法内预定义
+```
+
+function People(name, age) {
+  this.u_name = name;
+  this.u_age = age;
+}
+ 
+People.prototype.getName = function () {
+  return this.u_name;
+}
+ 
+dir(People);
+dir(new People(2));
+console.log(new People(3).getName());// 3
+```
+
+```
+function People(name, age) {
+    this.u_name = name;
+    this.u_age = age;
+ 
+    function getName() {
+        return this.u_name;
+    }
+}
+ 
+dir(People);
+dir(new People(2));
+console.log(new People(3).getName());// Uncaught TypeError: (intermediate value).getName is not a function
+
+
+```
+
+```
+
+function People(name, age) {
+    this.u_name = name;
+    this.u_age = age;
+ 
+    this.getName = function() {
+        return this.u_name;
+    }
+}
+ 
+var p = new People(4)
+console.log(p.getName());// 4
+```
+
+或
+```
+
+function People(name, age) {
+ 
+    function getName() {
+        return this.u_name;
+    }
+ 
+    return {
+        u_name: name,
+        u_age: age,
+        getName: getName
+    };
+ 
+}
+ 
+var p = new People(4)
+console.log(p.getName()); // 4
+```
 ---
 
 

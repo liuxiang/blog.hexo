@@ -17,6 +17,11 @@ tags: [ Android6.0, 权限检查机制 ]
 https://github.com/NeoLSN/cordova-plugin-android-permission
 
 
+- 官网替代插件已出:`cordova-plugin-compat`(无API调用文档)
+
+https://github.com/apache/cordova-plugin-compat
+
+
 # 安装
 
 ```

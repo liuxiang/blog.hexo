@@ -86,7 +86,7 @@ mv  /usr/local/nginx/logs /mnt/nginx/
 
 - 建立软连接`ln -s`( /usr/local/nginx/logs目录会自动创建 )，查看
 ```
-ln -s /mnt/nginx/log/ /usr/local/nginx/logs
+ln -s /mnt/nginx/logs/ /usr/local/nginx/logs
 
 
 ll  /usr/local/nginx/

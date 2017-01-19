@@ -7,9 +7,9 @@ photos:
 
 
 ---
-#前端安全&认证
+[下载：`web跨域.xmind`](https://github.com/liuxiang/xmind)
+
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/15-11-25/87806418.jpg)
 
 
-# 暂还没空上网盘,需要的留邮箱
 <!-- more -->

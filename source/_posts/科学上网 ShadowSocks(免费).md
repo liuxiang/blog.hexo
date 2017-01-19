@@ -24,7 +24,10 @@ https://www.mianvpn.com/index.html#free
 
 注意 `免费试用节点6小时更换一次密码与端口，请勿用于商业用途`
 
+
+
 - 查看配置
+
 
 <!--
 -->
@@ -32,11 +35,16 @@ https://www.mianvpn.com/index.html#free
 
 
 - `方式一`二维码扫码
+
+
 <!--
 -->
-![](http://7xnbs3.com1.z0.glb.clouddn.com/public/16-11-19/40930419.jpg)
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/public/16-11-19/40930419.jpg)
+
 
 - `方式二`手动填写
+
+
 <!--
 -->
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/public/16-11-19/72174072.jpg)
@@ -65,7 +73,9 @@ https://www.mianvpn.com/index.html#free
 中文名: 影梭
 源地址: https://github.com/shadowsocks/shadowsocks-android/releases
 
+
 - 效果
+
 
 <!--
 -->

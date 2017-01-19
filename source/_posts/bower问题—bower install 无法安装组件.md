@@ -1,4 +1,4 @@
-title: bower问题——ENOGIT git is not installed or not in the PATH
+title: bower问题—bower install 无法安装组件
 date: 2016-2-23 00:00:02 #发表日期，一般不改动
 categories:  bower  #文章文类
 
@@ -6,7 +6,6 @@ tags: [bower ]
 
 
 ---
-
 # bower install 无法安装组件
 ```
  C:\Users\Administrator\Desktop\***>bower install

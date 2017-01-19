@@ -1,10 +1,14 @@
-title: ionic项目同步更新package or 依据package.json,安装plugin或module
+title: package.json维护
 date: 2016-1-7 00:00:03 #发表日期，一般不改动
 categories: ionic  #文章文类
 tags: [ ionic ,package.json ]
 
 
 ---
+
+# ionic项目同步更新package or 依据package
+
+
 
 # 同步更新package.json
 **npm部分**

@@ -1,13 +1,11 @@
-title: application/x-www-form-urlencoded和multipart/form-data的区别
+title: x-www-form-urlencoded与form-data区别
 date: 2016-1-21 00:00:00 #发表日期，一般不改动
 categories: 网络   #文章文类
 tags: [ 网络,http ]
 
 
 ---
-
-
-# application/x-www-form-urlencoded
+# application/x-www-form-urlencoded和multipart/form-data的区别 ## application/x-www-form-urlencoded
 
 ```
 General
@@ -48,7 +46,7 @@ code:1
 ```
 
 
-# multipart/form-data
+## multipart/form-data
 ```
 General
 

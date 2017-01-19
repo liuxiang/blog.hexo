@@ -1,7 +1,14 @@
-title: ionic Icon and Splash Screen Image Generation完整收集
+title: ionic Icon and Splash完整收集
 date: 2016-09-14 00:00:00
 tags: [ionic]
  
+---
+
+
+# ionic Icon and Splash Screen Image Generation完整收集
+
+
+
 ---
 # ionic Icon and Splash Screen Image Generation官方说明
 
@@ -68,15 +75,14 @@ https://github.com/zhoujianhui/cordova-ionic-maven-archetype/blob/52d5186c785d1d
 https://github.com/AlexDisler/cordova-splash
 
 
-`AlexDisler/cordova-icon` 404star  ★ ★
-
+`AlexDisler/cordova-icon` 404star  ★ ★ ` for Android and iOS, at least 192*192px (512*512px recommended) `
 https://github.com/AlexDisler/cordova-icon
 ```
 cordova-icon --config=config.xml --icon= resources/ icon.png
 ```
 
 
-`AlexDisler/cordova-splash` 207star  ★ ★
+`AlexDisler/cordova-splash` 207star  ★ ★ ` Create a splash screen (2208x2208)`
 https://github.com/AlexDisler/cordova-splash
 
 ```

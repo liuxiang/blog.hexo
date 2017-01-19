@@ -4,45 +4,79 @@ tags: [linux,nginx]
 
 
 ---
-
-
-# nginx依赖
-- 下载模块依赖性Nginx需要依赖下面3个包
-1.gzip 模块需要 zlib 库 ( 下载: http://www.zlib.net/ )
-2.rewrite 模块需要 pcre 库 ( 下载: http://www.pcre.org/ )
-3.ssl 功能需要 openssl 库 ( 下载: http://www.openssl.org/ )
-
-
+# yum安装
 ```
-wget http://zlib.net/zlib-1.2.8.tar.gz
-wget  ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.37.tar.gz
-wget https://www.openssl.org/source/openssl-fips-2.0.12.tar.gz
+yum list zlib
 
-```
-```
-wget http://nginx.org/download/nginx-1.11.2.tar.gz
+yum install zlib
 
 ```
 
 
 ---
+# nginx依赖
+- 下载模块依赖性Nginx需要依赖下面3个包
+1.gzip 模块需要 zlib 库 ( 下载: http://www.zlib.net/ )
+2.rewrite 模块需要 pcre 库 ( 下载: http://www.pcre.org/ )
+3.ssl 功能需要 openssl 库 ( 下载: https://www.openssl.org/source/ ) openssl-fips符合FIPS标准Openssl 联邦信息处理标准
+
+
+```
+wget  http://zlib.net/zlib-1.2.8.tar.gz
+wget  ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
+wget https://www.openssl.org/source/openssl-fips-2.0.13.tar.gz
+```
+```
+wget http://nginx.org/download/nginx-1.11.6.tar.gz
+```
+
+
+---
+# 编译器安装
+```
+yum install -y gcc gcc-c++
+
+```
+
+
 # 系列安装
 
 
 
 ## openssl ：
+依赖
 ```
-[root@localhost] tar -zxvf openssl-fips-2.0.12.tar.gz
-[root@localhost] cd  openssl-fips-2.0.12
+yum install -y perl
+
+or
+https://www.perl.org/get.html   linux => download
+
+```
+安装
+```
+[root@localhost] tar -zxvf openssl-fips-2.0.13.tar.gz
+[root@localhost] cd  openssl-fips-2.0.13
 [root@localhost] ./config && make && make install
+```
+```
+yum list  openssl
+
+yum install  openssl
+
 ```
 
 
 # pcre:
 ```
-[root@localhost] tar -zxvf  pcre-8.37.tar.gz
-[root@localhost] cd pcre-8.37
+[root@localhost] tar -zxvf  pcre-8.39.tar.gz
+[root@localhost] cd pcre-8.39
 [root@localhost] ./configure && make && make install
+```
+```
+yum list  pcre
+
+yum install  pcre
+
 ```
 
 
@@ -52,21 +86,35 @@ wget http://nginx.org/download/nginx-1.11.2.tar.gz
 [root@localhost] cd zlib-1.2.8
 [root@localhost] ./configure && make && make install
 ```
+```
+yum list zlib
+
+yum install zlib
+
+```
 
 
 # 最后安装nginx
 ``` 
-tar -zxvf nginx-1.11.2.tar.gz
-cd nginx-1.11.2
+tar -zxvf nginx-1.11.6.tar.gz
+cd nginx-1.11.6
 ./configure &&   make && make install
 ```
+```
+yum list  nginx
+
+yum install  nginx
+
+```
+
+默认位置: `/usr/local/nginx`
 
 
 ## 或：指定目录安装
 ``` 
 
-tar -zxvf nginx-1.11.2.tar.gz
-cd nginx-1.11.2
+tar -zxvf nginx-1.11.6.tar.gz
+cd nginx-1.11.6
 ./configure --prefix=/home/nginx/nginx # 更换nginx安装路径
 make && make install
 ```
@@ -86,6 +134,25 @@ http://blog.csdn.net/grhlove123/article/details/47834673
 ---
 
 # 常见问题
+-  ./configure: error: C compiler cc is not found
+```
+yum -y install gcc
+
+```
+http://www.2cto.com/os/201408/329177.html
+
+
+---
+-  linux下安装安装pcre-8.32 configure: error: You need a C++ compiler for C++ support
+```
+yum install -y gcc gcc-c++
+
+```
+
+http://blog.sina.com.cn/s/blog_7253980a0101guiz.html
+
+
+---
 - nginx执行` ./configure `
 ```
 ./configure: error: the HTTP rewrite module requires the PCRE library.
