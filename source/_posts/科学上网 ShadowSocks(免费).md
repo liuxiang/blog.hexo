@@ -65,6 +65,16 @@ https://www.mianvpn.com/index.html#free
 
 
 ---
+
+
+Windows C#版下载： https://github.com/shadowsocksr/shadowsocksr-csharp/releases
+项目地址：https://github.com/shadowsocksr
+
+更新记录及详细说明链接 ： https://github.com/breakwa11/shadowsocks-rss
+
+
+
+---
 # 手机客户端
 <!-- 
 -->

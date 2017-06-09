@@ -257,7 +257,7 @@ templates是视图
 `http://build.phonegap.com`（ ios需要证书）
 
 
-# 问题处理篇:  ionic build android 执行空白
+# 问题处理篇:  ionic build android 执行空白(无响应) (空白返回)
 如下
 
 ```

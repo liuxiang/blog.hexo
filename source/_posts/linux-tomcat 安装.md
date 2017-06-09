@@ -1,6 +1,6 @@
 title: linux-tomcat 安装
 date: 2016-07-19 00:00:02
-tags: [ES6,WebStorm]
+tags: [linux,tomcat]
 
 
 ---

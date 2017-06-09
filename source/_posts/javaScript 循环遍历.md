@@ -21,6 +21,18 @@ numbers.forEach(function(number, index) {
   console.log('Index ' + index + ' with number ' + number);
 });
 ```
+```
+var arr = ['a', 'b', 'c'];
+for(data in arr) {
+    console.log(data);// 0 1 2
+}
+
+
+var arr = ['a', 'b', 'c'];
+for(data of arr) {
+    console.log(data);// a b c
+}
+```
  
 #` 对象/json` 遍历
 ```
@@ -105,6 +117,19 @@ angular.forEach(objs, function (value, key,data) {
 VM595:3 Object {a: 1, b: 2} "a" 1
 VM595:3 Object {a: 1, b: 2} "b" 2
 ```
+
+
+- 删除空json
+```
+var objs={'a':null,'b':'bb'};
+console.log('show',objs);
+angular.forEach(objs, function (value, key,data) {
+       !value && delete objs[key];
+});
+console.log('result',objs);
+```
+
+
 ---
 
 
@@ -127,6 +152,10 @@ for(var i=0;i<lis.length;i++){
 ```
 `如何循环遍历document.querySelectorAll方法返回的结果`
 https://zhidao.baidu.com/question/1756737727649600028.html
+
+
+`深入了解JavaScript中的for循环 - 推酷`
+http://www.tuicool.com/articles/BVzEFbM
 
 
 <!-- more -->

@@ -3,7 +3,6 @@ date: 2016-07-21 00:00:02
 tags: [linux,ssh]
  
 ---
- 
 # 编辑`sshd`服务配置文件
 ``` linux
 sudo vim /etc/ssh/sshd_config
@@ -18,5 +17,6 @@ sudo vim /etc/ssh/sshd_config
 ```  cpp
 sudo /etc/init.d/sshd restart
 ```
- 
+
+
 <!-- more -->

@@ -64,6 +64,12 @@ Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 �
 
 
 # 示例
+
+
+- [`renren-security`是一个轻量级权限管理系统]( http://git.oschina.net/babaio/renren-security )
+![]( http://git.oschina.net/uploads/images/2016/1223/111503_3df60329_63154.png )
+
+
 - [vue-bulma/vue-admin]( https://github.com/vue-bulma/vue-admin)  `star 2,188`
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/55408542-file_1484818151580_8c3c.png)  
 
@@ -73,5 +79,16 @@ Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 �
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/40671054-file_1484818165497_12ade.png)
  
 - [misterGF/CoPilot]( https://github.com/misterGF/CoPilot)   `star 470`
-![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/11652390-file_1484818178174_26d1.png)
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/11652390-file_1484818178174_26d1.png)
 
+
+# 浏览器devtools工具
+- [vue-devtools]( https://github.com/vuejs/vue-devtools)
+![](https://raw.githubusercontent.com/vuejs/vue-devtools/master/media/screenshot.png)
+
+
+
+# design(设计)
+- [vue-material]( https://github.com/marcosmoura/vue-material)
+Material design for Vue.js https://vuematerial.github.io
+![](https://vuematerial.github.io/assets/vue-material-example.png)

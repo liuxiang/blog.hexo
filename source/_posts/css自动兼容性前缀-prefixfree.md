@@ -37,9 +37,25 @@ http://leaverou.github.io/prefixfree/
 
 ```
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/56087384.jpg)
-<!--
--->
- 
+
+
+---
+# 编译器（gulp,Webpack）中兼容补偿 / CSS后处理器
+`autoprefixer`  https://github.com/postcss/autoprefixer
+```
+gulp.task('autoprefixer', function () {
+    var postcss      = require('gulp-postcss');
+    var sourcemaps   = require('gulp-sourcemaps');
+    var autoprefixer = require('autoprefixer');
+
+
+    return gulp.src('./src/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer() ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./dest'));
+});
+```
 
 
 ---

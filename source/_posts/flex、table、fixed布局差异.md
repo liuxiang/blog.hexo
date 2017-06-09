@@ -4,6 +4,29 @@ tags: [flex/table/fixed布局差异]
 
 
 ---
+# flex
+- 容器属性
+     - 水平两端对齐，项目之间的间隔都相等  `justify-content: space-between`
+    - 水平剧中 `justify-content: center`
+    - 垂直居中 `align-items:center`
+    - 垂直多根轴线的对齐方式 `align-content:center`
+    - 换行 `flex-wrap: wrap`
+- 项目属性
+    - 排序 order
+
+    - 动态放大` flex-grow`
+
+    - 动态缩小 `flex-shrink`
+
+    - 默认空间 `flex-basis`
+
+    - 简写 `flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]` `★`
+
+    - 元素独立布局 `align-self`
+
+
+
+---
 # 差异
 `display: flex;` 弹性布局,可直接操作宽度控制等分
 `display: table;` 表格布局,不可直接操作宽度,盒子宽度会被内容撑开. (可使用min-width,max-width辅助)

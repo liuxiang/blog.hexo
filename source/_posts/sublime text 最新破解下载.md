@@ -9,6 +9,12 @@ tags: [sublime text]
 
 
 
+- 需要登录才可下载，QQ登录即可
+或直开对应网盘：
+http://pan.baidu.com/s/1c0nH3X2#list/path=%2Frelease%2Fbeta&parentPath=%2F
+
+
+
 ---
 # 最新版本号见
 http://www.sublimetext.com/3

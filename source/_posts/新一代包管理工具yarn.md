@@ -27,6 +27,7 @@ npm install xxx -g === yarn global add xxx
 
 
 - 同样有淘宝的仓库:
+默认仓库:`https://registry.yarnpkg.com`
 ```
 yarn config set registry " https://registry.npm.taobao.org"
 ```

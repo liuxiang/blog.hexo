@@ -35,9 +35,55 @@ https://developer.apple.com/cn/
 证书的申请，需要在这里批准，app对应provition许可证需要在这里添加、生成后下载到本地使用。
 
 
+- 开发者支持
+https://developer.apple.com/support/cn/
+
+
+ - 会员资质
+https://developer.apple.com/support/membership/cn/
+
+
+- 支持-分发-App 审核
+https://developer.apple.com/support/app-review/cn/
+
+ 
+
+
+- 注册开发者要求
+https://developer.apple.com/programs/enroll/cn/
+
+
+ 
+# D-U-N-S® Number - 支持 - Apple Developer 
+https://developer.apple.com/support/D-U-N-S/cn/
+
+
+`查询企业邓白氏码`
+https://developer.apple.com/enroll/duns-lookup/#/search
+
+
 #  apple开发者-账户
 选择会员中心`Member Center`
 https://developer.apple.com/membercenter/index.action 
+
+
+---
+# 请求苹果技术支持
+```
+Technical Support Incident (TSI) 是针对 Apple 框架、API 和工具的代码级支持请求，适用于 Apple Developer Program、Apple Developer Enterprise Program 和 MFi Program 会员。如果您无法修复错误、在实现特定技术时遇到困难或是在代码方面存在其他问题，请提交 TSI。我们会将您的问题指派给某位开发者技术支持工程师，他/她能够帮助您对代码进行故障诊断，或者为您提供替代方案，从而加快您的开发进度。通常会在三个工作日内通过电子邮件使用英文做出回复。
+
+```
+https://developer.apple.com/support/technical/cn/
+
+
+---
+# 管理你的 Apple ID（管理绑定的设备）
+https://appleid.apple.com/#!&page=signin
+
+
+---
+# Apple Store 帐户（管理订单-开发者资质 ）
+http://www.apple.com/cn/shop/browse/account/home
 
 
 ---

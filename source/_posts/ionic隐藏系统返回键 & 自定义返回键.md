@@ -37,6 +37,27 @@ tags: [ ionic ]
 
 
 ---
+# 头部/底部添加按钮
+- 头部/底部可以添加按钮，按钮的样式根据头部/底部来设定，所以你不需要为按钮添加额外的样式。
+```
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Header Buttons</h1>
+  <button class="button">Edit</button>
+</div>
+```
+- button-clear 类可以设置无背景和边框的头部/底部按钮。
+```
+<div class="bar bar-header">
+  <button class="button button-icon icon ion-navicon"></button>
+  <div class="h1 title">Header Buttons</div>
+  <button class="button button-clear button-positive">Edit</button>
+</div>
+```
+http://www.runoob.com/ionic/ionic-button.html
+
+
+---
 # 解决ios键盘输入焦点时,切换页面导致崩溃问题
 ```
 

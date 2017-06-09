@@ -1,7 +1,7 @@
 
-title: javaStript Tips
+title:  javaScript t ips
 date: 2016-05-20 00:00:00
-tags: [  javaStript,Tips ]
+tags: [  javaScript , t ips ]
 
 
 ---
@@ -40,42 +40,52 @@ fn('world');
 ```
 
 
-# 尾递归
-- 尾调用是指某个函数的最后一步是调用另一个函数
-- 函数调用自身，称为递归
-- 如果尾调用自身，就称为尾递归
+---
+#  柯里化 ( Currying )
+- 柯里化有3个常见作用：1. 参数复用；2. 提前返回；3. 延迟计算/运行
 
-
-递归很容易发生"栈溢出"错误（stack overflow）
 ```
-function factorial(n) {
-  if (n === 1) return 1;
-  return n * factorial(n - 1);
+function add(a, b) {
+    return a + b;
 }
 
 
-factorial(5) // 120
-```
-
-`5*4*3*2*1`
-
-
-
-但对于尾递归来说，由于只存在一个调用记录，所以永远不会发生"栈溢出"错误
-
-```
-function factorial(n, total) {
-  if (n === 1) return total;
-  return factorial(n - 1, n * total);
+function curryingAdd(a) {
+    return function(b) {
+        return a + b;
+    }
 }
- 
-factorial(5, 1) // 120
+
+
+add(1, 2); // 3
+curryingAdd(1)(2); // 3
 ```
-`(5,1)<=(4,5)<=(3,4*5)<=(2,3*4*5)<=(1,2*3*4*5)==1*2*3*4*5`
 
 
+## `IIFE`的`Currying`实现
+`IIFE ` javascript立即执行函数表达式 
+语法：` (function(){ /* code */ })(); `
+```
+(function(param){
+  console.log(param);
+})('hello')
+```
+`Currying`实现
+```
+function currying(fn){
+  return function(param){
+    fn(param);
+  }
+}
 
-- 柯里化( Currying )减少参数
+
+currying(function(param){
+  console.log(param);
+})('hello');
+```
+
+
+## 柯里化(Currying)减少参数
 ```
 function currying(fn, n) {
   return function (m) {
@@ -92,7 +102,9 @@ const factorial = currying(tailFactorial, 1);
  
 factorial(5) // 120
 ```
-- 柯里化还能循环中闭包使用timeout
+
+
+## 柯里化还能循环中闭包使用timeout
 ```
   /**
    * 异步执行函数,目的:页面同步刷新(柯里化)
@@ -126,12 +138,64 @@ _forEach(0, 2);// 启动
 ```
 
 
-- 反柯里化
+## 反柯里化
 ```
 Function.prototype.uncurry = function () {
   return this.call.bind(this);
 };
 ```
+
+
+`掌握JavaScript函数的柯里化 - angular - SegmentFault`
+https://segmentfault.com/a/1190000006096034
+
+
+`浅析 JavaScript 中的 函数 currying 柯里化 - Tong Zeng - 博客园`
+http://www.cnblogs.com/zztt/p/4142891.html
+
+
+`JS中的柯里化(currying) « 张鑫旭-鑫空间-鑫生活`
+http://www.zhangxinxu.com/wordpress/2013/02/js-currying/  
+
+
+`由浅入深，深入详解 JavaScript 柯里化 - 推酷 ` -  柯里化与bind
+http://www.tuicool.com/articles/y6BVvqq
+
+
+---
+# 尾递归
+- 尾调用是指某个函数的最后一步是调用另一个函数
+- 函数调用自身，称为递归
+- 如果尾调用自身，就称为尾递归
+
+
+递归很容易发生"栈溢出"错误（stack overflow）
+```
+function factorial(n) {
+  if (n === 1) return 1;
+  return n * factorial(n - 1);
+}
+
+
+factorial(5) // 120
+```
+
+`5*4*3*2*1`
+
+
+
+但对于尾递归来说，由于只存在一个调用记录，所以永远不会发生"栈溢出"错误
+
+```
+function factorial(n, total) {
+  if (n === 1) return total;
+  return factorial(n - 1, n * total);
+}
+ 
+factorial(5, 1) // 120
+```
+`(5,1)<=(4,5)<=(3,4*5)<=(2,3*4*5)<=(1,2*3*4*5)==1*2*3*4*5`
+
 
 
 #  JavaScript中匿名函数的递归调用
@@ -573,6 +637,80 @@ function People(name, age) {
 var p = new People(4)
 console.log(p.getName()); // 4
 ```
+
+
+# 强制重排,重绘
+
+```
+// 对面板强行重绘（解决文字重叠问题）
+$("ion-content").css('display', 'none');
+document.body.offsetWidth;// 在样式变化间加入计算,可强制提交之前的样式变化。否则浏览器会进行事务优化，事务前后无变化的不再重绘
+$("ion-content").css('display', '');
+```
+
+
+# 删除数组
+- 使用`delete` 
+
+【非gangular(ng-repeat)环境,不能动态更新已展示元素的index下标】
+
+```
+var a=['a','b',' c '];
+delete a[0];
+a;// [undefined × 1, "b", "c"]
+```
+
+- 使用`splice` (推荐)
+```
+
+var a=['a','b','c'];
+a.splice(0,1);// 参数一：位置，参数二：删除数量
+a;//  ["b", "c"]
+```
+- 使用过滤器
+```
+var arr = [2, 3, 5, 7];
+arr = arr.filter(item => item !== 5);
+```
+
+
+---
+# 循环中删除数组
+- 循环中删除
+```
+var a=[1,2,3,4,5,6];
+a.forEach(function(item,index){
+    // console.log(item,index);
+    if(item == 2 || item == 3){
+        console.log('remove',index);
+        // a.splice(index,1);// 存在实时移位造成数据跳过的问题
+        delete a[index];// 保留位置删除，避免实时移位问题
+    }
+})
+console.log(a);// [1, undefined × 2, 4, 5, 6]
+a = a.filter(item => item !== 'undefined');// 清楚null值
+console.log(a);// [1, 4, 5, 6]
+```
+- 逆向遍历
+```
+var arr = [2, 3, 5, 7];
+for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] === 5) {
+        arr.splice(i, 1);
+    }
+}
+```
+
+
+`js 如何一次性删除数组中的多个元素？`
+https://segmentfault.com/q/1010000006956973?_ea=1190266
+
+
+
+`JavaScript splice() 方法`
+http://www.w3school.com.cn/jsref/jsref_splice.asp
+
+
 ---
 
 

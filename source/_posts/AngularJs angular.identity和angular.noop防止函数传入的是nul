@@ -1,0 +1,60 @@
+title: AngularJs angular.identity和angular.noop防止函数传入的是null对象
+date: 2017-4-9 00:00:00
+tags: [angular ]
+
+
+---
+
+
+# angular.identity
+函数返回本身的第一个参数。这个函数一般用于函数风格。
+格式：angular.identity()   
+```
+  (function () {
+    angular.module("Demo", [])
+    .controller("testCtrl", testCtrl);
+    function testCtrl() {
+         var getResult = function (fn, val) {
+          return (fn || angular.identity)(val);
+      };
+      var result = getResult(function (n) { return n * 2; }, 3); //  result = 6
+      var null_result = getResult(null, 3);//  null_result = 3
+      var undefined_result = getResult(undefined, 3);// undefined _result = 3
+    };
+  }())
+```
+
+
+---
+# angular.noop
+一个不执行任何操作的空函数。这个函数一般用于函数风格。
+格式：angular.noop();
+```
+  (function () {
+    angular.module("Demo", [])
+    .controller("testCtrl", testCtrl);
+    function testCtrl() {
+      var _console = function (v) {
+          return v * 2;
+      };
+      var getResult = function (fn, val) {
+          return (fn || angular.noop)(val);
+      };
+      var firstResult = getResult(_console, 3);//6
+      var secondResult = getResult(null, 3);//undefined
+      var thirdResult = getResult(undefined, 3);// undefined
+    };
+  }())
+```
+
+
+这两个api的也是有点醉，总的来说呢，这两个方法都是用来写函数的时候用的，根据上面写的demo的代码及运行结果来看，感觉他们的作用是用来防止函数传入的是null或者undefined或者其他不能操作的对象。因为如果去掉这两个后，你在函数调用的时候传入null/undefined/或者其他不能执行的对象，那么控制台是直接报错的...
+
+
+
+
+---
+**参考**
+`AngularJs angular.identity和angular.noop - 野兽' - 博客园`
+http://www.cnblogs.com/ys-ys/p/4922086.html
+

@@ -35,6 +35,9 @@ https://bbs.aliyun.com/read/284699.html?spm=5176.bbsr284699.0.0.CPENAv&page=2
 
 
 # 问题
+http://ipv6-test.com/validate.php
+
+
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/40359048-file_1484818385165_1033c.png)
 
 https://bbs.aliyun.com/read/290628.html 
@@ -74,6 +77,9 @@ Address:  222.28.155.25
 Addresses:  2001:da8:20d:400::7837:f474
           120.55.244.116
 ```
+
+
+- 购买海外云解析
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/80019689-file_1484818340912_10ae5.png)
 
 
@@ -102,5 +108,34 @@ http://mp.weixin.qq.com/s?plg_nld=1&plg_uin=1&mid=2247483863&idx=1&plg_nld=1&sce
 http://www.solve6.com/
  
 
+
+---
+# mac 搭建ipv6环境
+```
+第一步:通过数据线连接iphone和mac
+第二步:打开iphone的个人热点并选择仅USB
+第三步：打开网络偏好设置,确保你的Mac的Wi-Fi是打开的,并且没有连接任何网络
+第四步：打开系统偏好设置,按住option(alt)键点击共享
+第五步：选择iPhone USB -> Wi-Fi -> 创建NAT64
+用你另一台iPhone链接你Mac所创建的IPv6测试网络
+```
+
+
+`iOS-不用网线搭建IPv6网络测试环境 - SUPER_F - 博客园` `★`
+
+http://www.cnblogs.com/SUPER-F/p/IPV6.html
+
+
+`MAC或iOS 创建 IPv6 WIFI热点_百度经验`
+https://jingyan.baidu.com/article/6181c3e0b83071152ef153f0.html
+
+
+
+`通过自己的Mac来搭建本地IPv6网络 - 简书`
+http://www.jianshu.com/p/70ca0bf3acc7
+
+
+`本地 Mac 搭建 IPv6 测试环境 - 番薯大佬的专栏 - 博客频道 - CSDN.NET`
+http://blog.csdn.net/potato512/article/details/51680203
 
  

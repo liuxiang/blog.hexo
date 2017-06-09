@@ -130,6 +130,60 @@ http://www.oschina.net/news/57107/30-css-selector-you-should-remeber
 http://www.cnblogs.com/MaxIE/p/4078869.html
 
 
+# width设成100%background-size不起作用？
+
+```
+background-size: 100% 100%;
+
+background: url('../img/...jpg');
+```
+
+
+你这个的问题不是background-size在width:100%;的时候不起作用，而是根本就不起作用，你把background-size放在background属性之后才可以，要不然会被覆盖。
+```
+
+background: url('../img/...jpg');
+
+background-size: 100% 100%;
+
+```
+https://segmentfault.com/q/1010000004195716/a-1020000004198491
+
+
+# 高度等于宽度
+- css
+```
+width: 50%;
+height: 0;
+padding-bottom: 50%;
+
+
+background-color: #008b57;
+```
+或
+```
+width: 50%;
+
+height: calc(width);
+
+```
+- js
+```
+$('#box1').css('height',$('#box1').css('width'));
+
+```
+`css中如何规定某一元素高度等于其宽度`
+https://segmentfault.com/q/1010000002629233
+
+
+`请问，如何通过CSS实现高度height随宽度width变化而变化，保持长宽比例不变，宽度是根据父元素宽度变化的？ - hiYoHoo的回答 - SegmentFault`
+https://segmentfault.com/q/1010000002790621/a-1020000002791154
+
+
+`移动端布局，div按比例布局，宽度为百分比，但又想让高度和宽度一样，即让div为正方形，怎么做布局呢？ - 知乎`
+https://www.zhihu.com/question/31753528
+
+
 ---
 
 
