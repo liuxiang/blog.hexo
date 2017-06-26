@@ -76,9 +76,27 @@ http://baike.baidu.com/item/https
 http://www.mamicode.com/info-detail-1631526.html
 
 
+`openssl基本原理 + 生成证书 + 使用实例 - oldmtn的专栏 - 博客频道 - CSDN.NET`
+http://blog.csdn.net/oldmtn/article/details/52208747
+
+
+`Https单向认证和双向认证 - duanbokan的专栏 - 博客频道 - CSDN.NET`
+http://blog.csdn.net/duanbokan/article/details/50847612
+
 ---
 
 
+openssl、x509、crt、cer、key、csr、ssl、tls 这些都是什么鬼?
+
+http://www.cnblogs.com/yjmyzz/p/openssl-tutorial.html
+
+
+`那些证书相关的玩意儿(SSL,X.509,PEM,DER,CRT,CER,KEY,CSR,P12等)`
+http://www.cnblogs.com/guogangj/p/4118605.html
+
+
+
+---
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/448896-file_1484817404992_914a.png)
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/46324672-file_1484817412376_123a9.png)
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/14880190-file_1484817424981_12d7f.png)
@@ -94,9 +112,9 @@ http://www.tuicool.com/articles/ZVjMZ3Y
  
 # 密钥，CA证书
 - SSL证书分为四大类
-    - DV证书
-    - OV证书
-    - EV证书
+    - DV证书:DV证书即Domain Validation Certificate
+    - OV证书:OV证书即Organization Validation CErtificate
+    - EV证书:EV证书即Extended Validation Certificate 
     - 自签名证书: 自签名证书很少被部署到正式的网站上，一般是被用在内部的测试环境中. (工具openssl)
 https://github.com/michaelliao/itranswarp.js/blob/master/conf/ssl/gencert.sh
 

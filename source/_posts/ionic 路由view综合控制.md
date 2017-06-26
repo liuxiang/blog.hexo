@@ -32,6 +32,9 @@ $ionicHistory.currentHistoryId(); // 历史堆栈的 ID，是当前视图的父�
 
 window.history.back();                    // html控制历史
 ```
+`$ionicGoBack()`
+
+
 `API`  http://ionicframework.com/docs/api/service/$ionicHistory/
 
 
