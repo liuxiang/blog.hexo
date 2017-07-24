@@ -116,6 +116,7 @@ YGCT    FGC    FGCT     GCT
 
 ---
 # 先找高消耗（内存/cpu）进程->再找高消耗（内存/cpu）线程->记录线程pid的十进制->找到内存堆栈中的具体执行内容
+（纪念-问题发生在2011-7月）
 ```
 >top
   PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND

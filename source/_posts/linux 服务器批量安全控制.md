@@ -31,7 +31,7 @@ grep sysadmin /etc/passwd # 查看用户是否存在
 cp -rf .bashrc /home/sysadmin/
 cp -rf cfg /home/sysadmin/
 ```
-- 为新建的用户（sysadmin）赋予sudo权限
+- 为新建的用户（sysadmin）赋予`sudo`权限
 ```
 echo 'sysadmin  ALL=(ALL)    NOPASSWD:ALL' >> /etc/sudoers 
 # 或手动: sudo vim  /etc/sudoers

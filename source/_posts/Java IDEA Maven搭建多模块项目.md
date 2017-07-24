@@ -82,6 +82,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
 
 ---
+# 小技巧
+功能搜索`Ctrl+shift+A`-`reim` 选择`Reimport`即可`刷新 工程 maven`
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-7-21/41633512.jpg)
+
+
+---
 **参考**
 `Java一步一步构建web系统 在IDEA下用Maven搭建多模块项目 - 推酷`  `★`
 http://www.tuicool.com/articles/FZfiYfF
