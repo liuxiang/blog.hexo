@@ -10,9 +10,7 @@ tags: [ ES6 , WebStorm ]
 ```
 Preferences > Languages & Frameworks > JavaScript
 ```
-
-
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/81433424.jpg)
 
 
 

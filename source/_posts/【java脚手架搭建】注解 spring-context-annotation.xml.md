@@ -99,9 +99,13 @@ http://blog.csdn.net/zhang854429783/article/details/6785574
 
 - `@Aspect`注解代理(aspect切面)
 ```xml
-<!-- 激活自动代理功能 -->
+<!-- 激活自动代理功能:支持class代理(cglib) -->
 <aop:aspectj-autoproxy proxy-target-class="true" />
 ```
+`proxy-target-class 作用 - Leo's Blog - CSDN博客`
+http://blog.csdn.net/lc0817/article/details/46580735
+
+
 更多
 ```xml
 <aop:advisor> 定义一个AOP通知者 

@@ -30,7 +30,7 @@ use safe write save changes to a temporary file first
 
 ---
 # 避免文件发生变化就触发浏览器同步。更新为`Ctrl+S`
-
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/86170105.jpg)
 - Synchronze files on frame or editor tab activation : 在框架或编辑器选项卡激活时同步文件(验证结果：`关闭IDE会保存`)
 - save files on frame deactivation :  保存文件失帧(验证结果：`离开IDE工具，会触发保存`-浏览器同步)
 - Save fils automatically if application is idle for `15sec`: 如果应用程序空闲“15秒”，则自动保存文件

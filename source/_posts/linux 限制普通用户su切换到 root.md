@@ -42,6 +42,7 @@ sysadmin:x:500:10::/home/sysadmin:/bin/bash
 sudo vim /etc/pam.d/su
 # auth required pam_wheel.so use_uid (解开此注释)
 ```
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/43413358.jpg)
 
  
 #  Test：切换

@@ -9,13 +9,10 @@ tags: [六位密码框]
 
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/48657885.jpg)
-<!--
--->
 
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/17867479.jpg)
-<!--
--->
+
 
 # github Search
 ` 支付宝 密码 `
@@ -33,8 +30,7 @@ javaScript控制，界面密码，光标图片代替。
 # 简化实现
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/25214920.jpg)
 
-<!--
--->
+
 
 * 思路：
 `letter-spacing`控制字间距
@@ -45,8 +41,8 @@ javaScript控制，界面密码，光标图片代替。
 * 遗留问题
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/32584045.jpg)
 
-<!--
- -->
+
+
 虽控制了第5位的失去焦点，但在键盘按下，弹起之间还是会出现错位现象。
 
 ```

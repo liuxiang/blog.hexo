@@ -22,10 +22,6 @@ tags: [ markdown   ]
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg) -->
 
 
-<!--
-
- -->
-
 # 错误: 方式二
 <\!--
 
@@ -36,8 +32,7 @@ tags: [ markdown   ]
 
 
 
-<!--
--->
+
 出现的问题 : hexo博客框架显示会将标记打印出来.如:
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/87267740.jpg)
 

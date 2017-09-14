@@ -9,9 +9,6 @@ tags: [ 正则 ,xmind,书录 ]
 
 # Tab的区别
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/41625809.jpg)
-<!--
-
--->
 
 
 
@@ -20,16 +17,9 @@ tags: [ 正则 ,xmind,书录 ]
 4个空格. 粘贴到xmind,不能有效形成目录, 如
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/45208894.jpg)
 
-<!--
--->
-
-
 
 单个tab字符. 粘贴到xmind,有效形成目录,如
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/15305404.jpg)
-<!--
--->
-
 
 
 # Tab场景

@@ -62,7 +62,7 @@ http://blog.csdn.net/u012922981/article/details/50924515
 
 ---
 #   本地图片(前端)` 裁剪`
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/31992448.jpg)
 https://github.com/fengyuanchen/cropper
  
 ---

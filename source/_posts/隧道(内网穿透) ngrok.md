@@ -52,14 +52,15 @@ GET  /static/js/jquery-1.11.1.min.js 200 OK
 GET  /demo                           200 OK
 GET  /app/controller2main.html       200 OK
 ```
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/96821335.jpg)
 
  
 # Web UI 管理页面
 [`http://localhost:4040`]( http://localhost:4040 )
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/64319008.jpg)
  
 # 重新请求`Replay`
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/26203212.jpg)
  
 # 安装您的`Authtoken`
 ```

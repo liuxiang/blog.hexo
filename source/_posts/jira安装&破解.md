@@ -89,7 +89,7 @@ while executing the following:SELECT pluginkey, pluginenabled FROM pluginstate
 解决办法：手动到数据库中新建此表
 
 
-- 无法创建管理员账号
+- 无法创建管理员账号（Cannot add user,all the user directories are read-only）
 
  解决办法：重建数据库编码为`utf8`
 

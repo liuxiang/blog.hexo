@@ -232,4 +232,12 @@ tags: [善用佳软]
 
 
 
+
+
+# it资源分享
+| 类型 | soft | site |
+| ------------ | ------------ |
+| 在线ppt | slideshare | https://www.slideshare.net/
+
+
 <!-- more -->

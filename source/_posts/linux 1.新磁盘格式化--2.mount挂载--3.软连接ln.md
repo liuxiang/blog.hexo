@@ -34,26 +34,20 @@ Disk identifier: 0x00000000
 -   运行 fdisk /dev/xvdb，对数据盘进行分区。根据提示，依次输入 n，p，1，两次回车，wq，分区就开始了
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/82644598.jpg)
-<!--
--->
+
 
 -   运行 fdisk -l 命令，查看新的分区。新分区 xvdb1 已经创建好。如下面示例中的/dev/xvdb1。
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/39930823.jpg)
-<!--
--->
+
 
 -   运行 mkfs.ext3 /dev/xvdb1，对新分区进行格式化。格式化所需时间取决于数据盘大小。您也可自主决定选用其他文件格式，如 ext14 等。
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/35756625.jpg)
-<!--
--->
+
 
 -   运行 echo /dev/xvdb1 /mnt ext3 defaults 0 0 >> /etc/fstab 写入新分区信息。完成后，可以使用 cat /etc/fstab 命令查看。
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/20102328.jpg)
-<!--
--->  
-
 
 
 # 二.mount挂载

@@ -22,8 +22,6 @@ github https://github.com/appium/appium
 # 下载客户端
 http://appium.io/downloads.html
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/43180156.jpg)
-<!--
--->
 
 
  ---

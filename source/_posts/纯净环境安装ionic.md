@@ -117,6 +117,7 @@ You will require:
 处理办法:
 方法一:使用下载工具(可能要翻墙,不大-挺快) `adt-bundle\SDK Manager.exe`
 
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/89742526.jpg)
 
 
 方法二:网络下载放置 `adt-bundle\sdk\platforms`下

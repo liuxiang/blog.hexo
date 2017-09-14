@@ -71,6 +71,8 @@ TNS_ADMIN = ` F:\Tool\DB Orecle\instantclient_12_1\ `
 
 # 管理及使用
 ## DAB账号登录`sys`，连接为`SYSDBA`
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/12589487.jpg)
+
 
 ## 新建表空间（PL/SQL不提供试图创建，常用SQL）
 ## 新建用户（指定表空间）
@@ -87,6 +89,8 @@ grant dba to wosai with admin option;
 
 
 错误：ORA-65096：公用用户名或角色名无效
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/91807164.jpg)
+
 
 - 解决
 

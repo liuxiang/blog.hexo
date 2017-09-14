@@ -45,8 +45,7 @@ tags: [flex/table/fixed布局差异]
 
 # 示例效果 & 代码
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/92840580.jpg)
-<!--
--->
+
 
 -  html
 ```

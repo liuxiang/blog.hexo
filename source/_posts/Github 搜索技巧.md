@@ -66,8 +66,7 @@ https://searchcode.com/
 
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/10685161.jpg)
-<!--
--->
+
 
 ```
 Searchcode是一款免费的源代码/文档搜索引擎，项目创建者为Ben Boyter。这里汇聚了Github、Bitbucket、Google Code、Codeplex、Sourceforge、Fedora Project等多家开源站点，拥有超过20万个项目、180亿行源代码，能以特殊字符、语言、仓库和源方式从90多种语言找到函数、API的真实代码。基于此，程序员可以搜索数百亿行软件代码，从中找寻编码技巧。果断Mark！

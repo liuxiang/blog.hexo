@@ -84,9 +84,6 @@ error: No files found.
 6.`正常输出静态目录` `doc`
 打开 `index.html`
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-5/59379577.jpg)
-<!--
--->
-
 
 
 # 应用 & 技巧

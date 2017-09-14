@@ -55,5 +55,5 @@ Initui.prototype.init = function() {
 ---
 ## 分析方法：
 选择被刷新的标签，设置节点的删除监听`break on - Node removal`.断点后，查看线程堆栈分析过程
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/55723545.jpg)
  

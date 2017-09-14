@@ -50,6 +50,7 @@ var permissions = cordova.plugins.permissions;
 ```
 # 更多150余种权限参数,请见
 https://github.com/NeoLSN/cordova-plugin-android-permission/blob/master/www/permissions.js
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/33817408.jpg)
 
  
 
@@ -60,7 +61,5 @@ https://github.com/NeoLSN/cordova-plugin-android-permission/blob/master/www/perm
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-7-30/33998655.jpg)
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-7-30/95736569.jpg)
-<!--
--->
  
    <!-- more -->

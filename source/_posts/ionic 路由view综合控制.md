@@ -308,20 +308,14 @@ $ionicHistory.nextViewOptions({
 
 ## 在次页面主动跳转到主页面,ionicHistory会存在历史,导致首页无法显示菜单图标
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/58277758.jpg)
-<!--   -->
 `ionic导航之后返回功能的说明 - 阿锋佬 - 博客园`
 http://www.cnblogs.com/feng18/p/5217680.html
 
 
 - 原因
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-9-24/87393479.jpg)
-<!--
--->
  
 `viewData.enableBack` 存在了历史
-
-
-
 
 
 ---

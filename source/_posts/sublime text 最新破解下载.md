@@ -4,7 +4,12 @@ tags: [sublime text]
 
 
 ---
-# 破解下载 http://sublimetext.iaixue.com/dl/#win.zh_cn.x64
+# 官方下载
+http://www.sublimetext.com/3
+
+
+---
+# 破解&汉化下载 http://sublimetext.iaixue.com/dl/#win.zh_cn.x64
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/4036217-file_1484816498391_133d.png)
 
 
@@ -21,3 +26,6 @@ http://www.sublimetext.com/3
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/17-1-19/16751226-file_1484816514885_9bc8.png)
 
  
+---
+`Sublime Text3与Sublime Text 2的区别在哪里？ - 知乎`
+https://www.zhihu.com/question/25078353/answer/30021831

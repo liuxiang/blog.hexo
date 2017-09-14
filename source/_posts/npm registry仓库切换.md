@@ -5,9 +5,12 @@ tags: [npm registry]
 
 ---
 # 安装npm仓库管理 ```
-npm install nrm
-npm ls
+npm install nrm -g
+nrm ls
 ```
+https://github.com/Pana/nrm
+
+
 # 查看仓库
 ```
 >nrm ls

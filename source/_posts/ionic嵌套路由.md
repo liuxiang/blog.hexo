@@ -349,9 +349,12 @@ function isShow(stateName) {
 
 
 -  出现情况，index=1 复用了historyId
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/38952069.jpg)
 
  
 - 不出现情况，各自为index=0
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/35408752.jpg)
+
 
 - 问题原因：嵌套路由间切换，同样会发生历史轨迹，出现返回键的情况
 - 解决办法：对嵌套路由间切换，全部升级为顶层路由 (不同于默认顶层root)

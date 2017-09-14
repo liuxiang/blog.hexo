@@ -17,8 +17,8 @@ http://subversion.apache.org/packages.html#windows
 
 
 
- 
-- **subversion **
+---
+- **subversion(支持控制台Command) **
 https://tortoisesvn.net/downloads.html  `TortoiseSVN-1.9.5.27581-x64-svn-1.9.5.msi`
 
 使用的是TortoiseSVN-1.9.4.27285-x64-svn-1.9.4，安装过程需要注意的是，默认安装没有选择”command line client tools”

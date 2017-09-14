@@ -1,4 +1,4 @@
-title: 我的javaScript风格
+title: 尝试的javaScript风格
 date: 2016-3-3 00:00:04
 categories: javaScript
 tags: [javaScript,javaScript风格]
@@ -19,7 +19,7 @@ tags: [javaScript,javaScript风格]
 
 
 # WebStorm  设置文件模板 `搜-template`->Editor-`File and code Templates`
- 
+![]( http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/82160109.jpg)  
 
 
 # 构造方法,风格编码

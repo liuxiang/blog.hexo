@@ -555,14 +555,10 @@ and COLUMN_NAME like 'nick_name'; # 描述列(依据字段,查找周边关系表
 
 http://dev.mysql.com/doc/refman/5.7/en/create-table.html
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/90252887.jpg)
-<!-- -->
 
 
 第三方分类  http://overapi.com/mysql
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-7-1/10071748.jpg)
-<!--
--->
-
 
 
 ** Oracle    Database SQL Reference 数据库 SQL参考（完全 参考手册 ）**
@@ -573,7 +569,6 @@ http://docs.oracle.com/cd/E11882_01/timesten.112/e21642/function.htm#TTSQL446
 `oracle Database - SQL Statements SQL语句`
 http://docs.oracle.com/cd/E11882_01/timesten.112/e21642/state.htm#TTSQL277
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/1486632.jpg)
-<!--   -->
 
 
 <!-- more -->

@@ -10,9 +10,6 @@ tags: [ Chrome Dev Tools ,   Chrome DevTools,  inspect ]
 
 # Chrome DevTools Devices inspect无法显示调试工具(页面空白)
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/24830606.jpg)
-<!--
--->
-
 
 
 ## 原因
@@ -24,8 +21,6 @@ tags: [ Chrome Dev Tools ,   Chrome DevTools,  inspect ]
 使用代理工具或配置本地host
 我使用的chrome插件"壁虎漫步"
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/55846780.jpg)
-<!--
--->
 
 
 ``` 
@@ -40,9 +35,6 @@ http://45.124.67.101:8080/?code=JTCB136VTElC4fEvYQrxt1avWqWdrhdO&index=0
 
 # 效果
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/74546907.jpg)
-<!--
--->
-
 
 
 **参考**

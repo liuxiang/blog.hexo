@@ -24,17 +24,13 @@ profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF
 
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/56122133.jpg)
-<!--
--->
-
 
 
 # 保存会话: Shift+Ctrl+S
 
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/40699125.jpg)
 
-<!--
--->
+
 
 
 
@@ -52,23 +48,12 @@ profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF
 
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/76344883.jpg)
 
-<!--
--->
-
 
 * 处理:
 使用sftp先建立远程连接
 
 
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/10786977.jpg)
-
-<!--
--->
-<!--
--->
-
-<!--
--->
 
 
 
@@ -77,10 +62,6 @@ profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF
 
 `profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF`
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/13022252.jpg)
-
-<!--
--->
-
 
 
 ## 情况二:  直接使用sftp连接 
@@ -101,9 +82,6 @@ profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF
 
 
 `profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF`
-<!--
--->
-
 
 
 * BCompare 针对性远程连接配置
@@ -112,8 +90,7 @@ profile:root@121.40.50.157?/usr/local/apache-tomcat-6.0.32/webapps/ROOT/WEB-INF
 
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-6-16/84080662.jpg)
 
-<!--
--->
+
 
 
 

@@ -67,7 +67,7 @@ isFullScreen: "webkitIsFullScreen"
 
 
 ---
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/68509484.jpg)
 
 `HTML5 requestFullScreen&exitFullscreen全屏兼容方案`
 

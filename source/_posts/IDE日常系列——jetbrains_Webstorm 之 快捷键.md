@@ -29,6 +29,7 @@ Atl+/      默认为：Alt+Space 被冲突，需要重新设置 ' Code Completio
 万能搜索 Double Shift (双击Shift键)[ Shift+Shift ],其会展示各类资源的快捷键
 
 
+
 Recent Files 最近打开的文件 Ctrl+E
 Classes 查找类对象,js对象 Ctrl+N
 Files 查找文件 Ctrl +Shift+N 

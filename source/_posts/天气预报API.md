@@ -23,11 +23,13 @@ http://www.cnblogs.com/wangshuo1/p/5583229.html
 
 # 天气预报API - 心知天气 - 创建网页天气插件
 https://www.seniverse.com/widget/create
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/80260431.jpg)
 
- 
-# 百度-api服务搜索
+
+
+api服务搜索
 http://apistore.baidu.com/astore/servicesearch?word=%E5%A4%A9%E6%B0%94
-
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/57247185.jpg)
   # 彩云API
 http://wiki.swarma.net/index.php/%E5%BD%A9%E4%BA%91%E5%A4%A9%E6%B0%94API/v2
 

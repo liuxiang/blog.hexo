@@ -36,14 +36,12 @@ clearTimeout(setTimeout( "" )); // web debug
 
 
 
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/81202651.jpg)
 
 
 
-
-## 事件断点：脚本声明（sript First statement） `适合使用了` `use Strict`声明的js文件
-
-
- 
+## 事件断点：脚本声明（`sript First statement`） `适合使用了` `use Strict`声明的js文件
+![](http://7xnbs3.com1.z0.glb.clouddn.com/17-8-12/92314456.jpg)
 
 
 

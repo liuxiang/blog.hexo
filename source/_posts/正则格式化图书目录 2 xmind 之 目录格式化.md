@@ -53,8 +53,6 @@ tags: [ 正则 ,xmind,书录 ]
 <
 ```
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/27375558.jpg)
-<!--
-- ->
 
 
 效果1:
@@ -100,9 +98,6 @@ tags: [ 正则 ,xmind,书录 ]
 
 ```
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/38014154.jpg)
-<!--
--->
-
 
 
 效果2:
@@ -138,9 +133,6 @@ tags: [ 正则 ,xmind,书录 ]
 # 最终2xmind效果
 复制上文,到剪切板 - 选中xmind主题 - 粘贴 - 查看效果
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-2-23/27382676.jpg)
-<!--
--->
-
 
 
 <!-- more -->

@@ -50,7 +50,7 @@ ps -ef | grep nginx | grep -v grep | awk '{print $2}' |  xargs kill  -9
 /bin/tcsh
 /bin/csh
 ```
-- Mac 多了一个 zsh
+- Mac 多了一个 `zsh`
 
  Linux 系统和 OS X 系统的默认 Shell 都是 bash，但是真正强大的 Shell 是深藏不露的 zsh， 这货绝对是马车中的跑车，跑车中的飞行车，史称『终极 Shell』
 
@@ -86,6 +86,36 @@ alias version='java Version'
 alias webapps='cd ${CATALINA_HOME}/webapps'
 alias which='alias | /usr/bin/which --tty-only --read-alias --show-dot --show-tilde'
 ```
+
+
+---
+# 安装`zsh`
+```
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+```
+```
+➜  ~ ll
+total 0
+drwx------@  3 liuxiang  staff   102B  7 24 13:26 Applications
+drwx------+ 11 liuxiang  staff   374B  7 25 11:19 Desktop
+drwx------+  4 liuxiang  staff   136B  7 24 14:31 Documents
+drwx------+ 16 liuxiang  staff   544B  7 26 11:25 Downloads
+drwx------@ 58 liuxiang  staff   1.9K  7 24 21:38 Library
+drwx------+  3 liuxiang  staff   102B  7 24 11:02 Movies
+drwx------+  4 liuxiang  staff   136B  7 25 09:08 Music
+drwx------+  3 liuxiang  staff   102B  7 24 11:02 Pictures
+drwxr-xr-x+  5 liuxiang  staff   170B  7 24 11:02 Public
+```
+`终极 Shell——ZSH - MacTalk - 知乎专栏 `
+https://zhuanlan.zhihu.com/p/19556676?columnSlug=mactalk
+
+
+`robbyrussell/oh-my-zsh `
+https://github.com/robbyrussell/oh-my-zsh
+
+
+`终极 Shell——ZSH - MacTalk - 知乎专栏 `  -`autojump`
+https://zhuanlan.zhihu.com/p/19556676?columnSlug=mactalk
 
 
 ---

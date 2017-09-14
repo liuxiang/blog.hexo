@@ -37,16 +37,12 @@ tags: [ 压力测试， 阿里云 PTS ]
 
 
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-26/69801525.jpg)
-<!-- -->
 
 
 * 步调0s：
 接口 TPS50 * 步调0 = 极限支持用户量就是0，所以可以看出，从系统一开始就出现了失败请求。
 随着人数的增加，50人并发*[0.1~1.0s ]的极限步调=承受的人数
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-26/37569248.jpg)
-<!--
--->
-
 
 
 
@@ -55,9 +51,6 @@ tags: [ 压力测试， 阿里云 PTS ]
 明显超过50人后，系统才出现失败请求
 公式: 接口TPS50*步调1s = 系统承受人数50（超过50人则超出承受，异常请求就会出现）
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-26/7420070.jpg)
-<!--
--->
-
 
 
 * 反推：系统如需支持200人在线，在 接口 现状的TPS50下，步调多少可以正常处理所有请求呢。
@@ -70,8 +63,6 @@ tags: [ 压力测试， 阿里云 PTS ]
 如果50内，系统可以承受，超过则出现异常（200时为最大值）
 波动的幅度就是步调（1~4）中的`齐步走`线程数量
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-26/56769532.jpg)
-<!--
--->
 
 
 * 再推算: 在正常处理所有请求的情况下，应该配置多少人并发。【50人并发】- TPS失控了，不是预想的50
@@ -81,9 +72,6 @@ tags: [ 压力测试， 阿里云 PTS ]
 为什么TPS只达到（35~40)？这是新的思考问题，猜测：因为TPS不是个常量而是变量，所以在系统负载一段时间后可能会发生变化（降低）
 而承受的在线人数（1s的步调下）是与TPS数同步的。
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-26/18846153.jpg)
-<!--
--->
-
 
 
 
@@ -91,9 +79,6 @@ tags: [ 压力测试， 阿里云 PTS ]
 * 配合当前的TPS数(30)，配置并发人数(30)，步调1s
 结果和想的一样，所有请求全部成功。
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-26/29558051.jpg)
-<!--
--->
-
 
 
 * 最终结论：
@@ -140,12 +125,10 @@ http://**.43/ng-test.html
 `可以使用企业版TPS或使用自己的机器做施压机+ad， loadrunner `
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/64724641.jpg)
 
-<!--
 
--->
+
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/8272035.jpg)
-<!--
--->
+
 
 
 
@@ -163,17 +146,11 @@ http://**.43/test/test.html
 ![](
 http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/32091008.jpg)
 
-<!--
-
--->
 
 
 ![](
 http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/77166171.jpg)
 
-<!--
-
--->
 
 
 
@@ -189,18 +166,10 @@ http://
 ![](
 http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/62976709.jpg)
 
-<!-- 
 
-
--->
 
 ![](
 http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/21983895.jpg)
-
-<!-- 
-
-
--->
 
 
 
@@ -208,11 +177,9 @@ http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/21983895.jpg)
 http://**.43/k12platform/service/school/330110
 在此场景下，TPS可达到240左右（每秒并发数）  
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/24325406.jpg)
-<!--
--->
+
+
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/34913036.jpg)
-<!--
--->
 
 
 *
@@ -226,18 +193,10 @@ http://**.43/k12platform/service/login/oneLogin/student/15158136199/88
 ![](
 http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/97025281.jpg)
 
-<!-- 
 
-
--->
 
 ![](
 http://7xnbs3.com1.z0.glb.clouddn.com/16-5-27/71592669.jpg)
-
-<!-- 
-
-
--->
 
 
 ---

@@ -226,10 +226,9 @@ hooks\after_prepare\ 060_uglify.js
 *  结果： platforms\android\build\outputs\apk\ `android-debug.apk` 混淆效果
 ![](http://7xnbs3.com1.z0.glb.clouddn.com/16-5-10/52737274.jpg)
 
-<!-- -->
+
+
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-10/91724998.jpg)
-<!--
--->
 
 
 ---
@@ -246,9 +245,6 @@ $templateCache.put("templates/tabs.html","<!--\nCreate tabs with an icon and lab
 $templateCache.put("templates/a/chat-detail.html","<!--\n  This template loads for the \'tab.friend
 ```
 ![]( http://7xnbs3.com1.z0.glb.clouddn.com/16-5-10/61352120.jpg)
-<!--
--->
-
 
 
 # `gulp-ng-annotate`插件效果(启用angular ng-strict-di)
